@@ -103,7 +103,7 @@ Before running the POC environment, ensure the following are in place:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<org>/Concert_poc.git
+git clone https://github.com/Lakshita-ibm/Concert_poc.git
 cd Concert_poc
 ```
 

@@ -1,0 +1,7 @@
+[
+  { "id": "c1", "name": "upi-gateway.psb.in", "asset": "UPI Gateway", "assetId": "a1", "issuer": "DigiCert", "expiresIn": 5, "status": "Critical", "type": "TLS", "services": ["UPI"] },
+  { "id": "c2", "name": "api-gateway.psb.in", "asset": "API Gateway (Kong)", "assetId": "a5", "issuer": "Let's Encrypt", "expiresIn": 12, "status": "Warning", "type": "TLS", "services": ["UPI", "ATM", "AEPS", "Mobile Banking", "Net Banking"] },
+  { "id": "c3", "name": "mobilebanking.psb.in", "asset": "Mobile Banking App", "assetId": "a4", "issuer": "GlobalSign", "expiresIn": 45, "status": "Healthy", "type": "TLS", "services": ["Mobile Banking"] },
+  { "id": "c4", "name": "aeps-service.psb.in", "asset": "AEPS Service", "assetId": "a3", "issuer": "DigiCert", "expiresIn": 8, "status": "Critical", "type": "mTLS", "services": ["AEPS"] },
+  { "id": "c5", "name": "netbanking.psb.in", "asset": "Net Banking Portal", "assetId": "a8", "issuer": "Sectigo", "expiresIn": 90, "status": "Healthy", "type": "TLS", "services": ["Net Banking"] }
+]

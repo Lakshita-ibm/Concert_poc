@@ -1,0 +1,10 @@
+[
+  { "id": "v1", "cve": "CVE-2025-1111", "severity": "Critical", "asset": "UPI Gateway", "assetId": "a1", "description": "Remote code execution in API Gateway reverse proxy", "cvss": 9.8, "status": "Open", "daysOpen": 12, "affectedServices": ["UPI", "Mobile Banking"] },
+  { "id": "v2", "cve": "CVE-2024-4040", "severity": "Critical", "asset": "Mobile Banking App", "assetId": "a4", "description": "Log4j Remote Code Execution vulnerability", "cvss": 10.0, "status": "Open", "daysOpen": 7, "affectedServices": ["Mobile Banking", "UPI", "Net Banking"] },
+  { "id": "v3", "cve": "CVE-2024-3094", "severity": "High", "asset": "API Gateway (Kong)", "assetId": "a5", "description": "XZ Utils backdoor in compression library", "cvss": 8.5, "status": "In Progress", "daysOpen": 20, "affectedServices": ["UPI", "ATM", "AEPS", "Mobile Banking", "Net Banking"] },
+  { "id": "v4", "cve": "CVE-2025-0890", "severity": "High", "asset": "ATM Switch", "assetId": "a2", "description": "Buffer overflow in network device firmware", "cvss": 7.9, "status": "Open", "daysOpen": 5, "affectedServices": ["ATM"] },
+  { "id": "v5", "cve": "CVE-2024-6387", "severity": "Critical", "asset": "Kubernetes Cluster", "assetId": "a6", "description": "OpenSSH regreSSHion race condition RCE", "cvss": 8.1, "status": "Open", "daysOpen": 30, "affectedServices": ["UPI", "AEPS", "Mobile Banking"] },
+  { "id": "v6", "cve": "CVE-2024-9999", "severity": "High", "asset": "AEPS Service", "assetId": "a3", "description": "Authentication bypass in payment microservice", "cvss": 7.5, "status": "Open", "daysOpen": 3, "affectedServices": ["AEPS"] },
+  { "id": "v7", "cve": "CVE-2025-2222", "severity": "Medium", "asset": "Net Banking Portal", "assetId": "a8", "description": "Cross-site scripting in session management", "cvss": 6.1, "status": "Open", "daysOpen": 15, "affectedServices": ["Net Banking"] },
+  { "id": "v8", "cve": "CVE-2024-8888", "severity": "High", "asset": "Mobile Banking App", "assetId": "a4", "description": "Insecure deserialization in REST API layer", "cvss": 7.8, "status": "Open", "daysOpen": 8, "affectedServices": ["Mobile Banking"] }
+]

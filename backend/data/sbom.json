@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sb1",
+    "application": "Mobile Banking",
+    "version": "4.2.1",
+    "components": [
+      { "name": "Spring Boot", "version": "2.7.5", "license": "Apache-2.0", "riskLevel": "Medium", "cve": "CVE-2024-8888", "cvss": 7.8 },
+      { "name": "Log4j", "version": "2.14.1", "license": "Apache-2.0", "riskLevel": "Critical", "cve": "CVE-2024-4040", "cvss": 10.0 },
+      { "name": "OpenSSL", "version": "1.1.1t", "license": "OpenSSL", "riskLevel": "Low", "cve": null, "cvss": null },
+      { "name": "PostgreSQL Driver", "version": "42.5.0", "license": "BSD-2", "riskLevel": "Low", "cve": null, "cvss": null },
+      { "name": "Jackson Databind", "version": "2.13.4", "license": "Apache-2.0", "riskLevel": "Medium", "cve": null, "cvss": null }
+    ],
+    "impactedServices": ["Mobile Banking", "UPI", "API Layer"],
+    "totalComponents": 47,
+    "criticalComponents": 1,
+    "highComponents": 2
+  },
+  {
+    "id": "sb2",
+    "application": "UPI Gateway",
+    "version": "3.1.0",
+    "components": [
+      { "name": "Kong Gateway", "version": "3.3.0", "license": "Apache-2.0", "riskLevel": "Critical", "cve": "CVE-2025-1111", "cvss": 9.8 },
+      { "name": "Nginx", "version": "1.24.0", "license": "BSD-2", "riskLevel": "Low", "cve": null, "cvss": null },
+      { "name": "LuaJIT", "version": "2.1.0", "license": "MIT", "riskLevel": "Low", "cve": null, "cvss": null },
+      { "name": "OpenSSL", "version": "3.0.8", "license": "OpenSSL", "riskLevel": "Low", "cve": null, "cvss": null }
+    ],
+    "impactedServices": ["UPI", "ATM", "AEPS", "Mobile Banking", "Net Banking"],
+    "totalComponents": 23,
+    "criticalComponents": 1,
+    "highComponents": 1
+  },
+  {
+    "id": "sb3",
+    "application": "AEPS Service",
+    "version": "2.0.4",
+    "components": [
+      { "name": "Node.js", "version": "18.12.0", "license": "MIT", "riskLevel": "Medium", "cve": "CVE-2024-9999", "cvss": 7.5 },
+      { "name": "Express", "version": "4.18.2", "license": "MIT", "riskLevel": "Low", "cve": null, "cvss": null },
+      { "name": "Passport.js", "version": "0.6.0", "license": "MIT", "riskLevel": "Low", "cve": null, "cvss": null }
+    ],
+    "impactedServices": ["AEPS"],
+    "totalComponents": 31,
+    "criticalComponents": 0,
+    "highComponents": 1
+  }
+]

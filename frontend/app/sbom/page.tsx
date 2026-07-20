@@ -56,7 +56,7 @@ export default function SBOM() {
         <h1 className="text-2xl font-bold text-white flex items-center gap-2">
           <Package size={24} className="text-[#3b82f6]" /> SBOM Intelligence
         </h1>
-        <p className="text-[#57606a] text-sm mt-1">Software Bill of Materials — Component Risk Analysis</p>
+        <p className="text-[#57606a] text-sm mt-1">Software Bill of Materials: Component Risk Analysis</p>
       </div>
 
       {/* App Tabs */}

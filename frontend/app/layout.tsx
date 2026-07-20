@@ -6,7 +6,7 @@ import Sidebar from "@/components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PSB Concert POC — AI Risk Intelligence",
+  title: "PSB Concert POC: AI Risk Intelligence",
   description: "IBM Concert POC for Punjab & Sind Bank",
 };
 

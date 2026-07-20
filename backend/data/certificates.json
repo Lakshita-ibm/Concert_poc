@@ -1,7 +1,1866 @@
 [
-  { "id": "c1", "name": "upi-gateway.psb.in", "asset": "UPI Gateway", "assetId": "a1", "issuer": "DigiCert", "expiresIn": 5, "status": "Critical", "type": "TLS", "services": ["UPI"] },
-  { "id": "c2", "name": "api-gateway.psb.in", "asset": "API Gateway (Kong)", "assetId": "a5", "issuer": "Let's Encrypt", "expiresIn": 12, "status": "Warning", "type": "TLS", "services": ["UPI", "ATM", "AEPS", "Mobile Banking", "Net Banking"] },
-  { "id": "c3", "name": "mobilebanking.psb.in", "asset": "Mobile Banking App", "assetId": "a4", "issuer": "GlobalSign", "expiresIn": 45, "status": "Healthy", "type": "TLS", "services": ["Mobile Banking"] },
-  { "id": "c4", "name": "aeps-service.psb.in", "asset": "AEPS Service", "assetId": "a3", "issuer": "DigiCert", "expiresIn": 8, "status": "Critical", "type": "mTLS", "services": ["AEPS"] },
-  { "id": "c5", "name": "netbanking.psb.in", "asset": "Net Banking Portal", "assetId": "a8", "issuer": "Sectigo", "expiresIn": 90, "status": "Healthy", "type": "TLS", "services": ["Net Banking"] }
+  {
+    "id": "c_exp_1",
+    "certificateId": "C_EXP_1",
+    "name": "expired-1.psb.in",
+    "certificateName": "expired-1.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Sectigo",
+    "expiresIn": -5,
+    "remainingDays": -5,
+    "expiryDate": "2026-07-11",
+    "status": "Expired",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_exp_2",
+    "certificateId": "C_EXP_2",
+    "name": "expired-2.psb.in",
+    "certificateName": "expired-2.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "DigiCert",
+    "expiresIn": -2,
+    "remainingDays": -2,
+    "expiryDate": "2026-07-14",
+    "status": "Expired",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_exp_3",
+    "certificateId": "C_EXP_3",
+    "name": "expired-3.psb.in",
+    "certificateName": "expired-3.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Sectigo",
+    "expiresIn": 0,
+    "remainingDays": 0,
+    "expiryDate": "2026-07-16",
+    "status": "Expired",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_soon_1",
+    "certificateId": "C_SOON_1",
+    "name": "expiring-soon-1.psb.in",
+    "certificateName": "expiring-soon-1.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "GlobalSign",
+    "expiresIn": 2,
+    "remainingDays": 2,
+    "expiryDate": "2026-08-01",
+    "status": "Expiring Soon",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_soon_2",
+    "certificateId": "C_SOON_2",
+    "name": "expiring-soon-2.psb.in",
+    "certificateName": "expiring-soon-2.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Entrust",
+    "expiresIn": 5,
+    "remainingDays": 5,
+    "expiryDate": "2026-08-02",
+    "status": "Expiring Soon",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_soon_3",
+    "certificateId": "C_SOON_3",
+    "name": "expiring-soon-3.psb.in",
+    "certificateName": "expiring-soon-3.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "GlobalSign",
+    "expiresIn": 8,
+    "remainingDays": 8,
+    "expiryDate": "2026-08-03",
+    "status": "Expiring Soon",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_soon_4",
+    "certificateId": "C_SOON_4",
+    "name": "expiring-soon-4.psb.in",
+    "certificateName": "expiring-soon-4.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 9,
+    "remainingDays": 9,
+    "expiryDate": "2026-08-04",
+    "status": "Expiring Soon",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_soon_5",
+    "certificateId": "C_SOON_5",
+    "name": "expiring-soon-5.psb.in",
+    "certificateName": "expiring-soon-5.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 12,
+    "remainingDays": 12,
+    "expiryDate": "2026-08-05",
+    "status": "Expiring Soon",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_soon_6",
+    "certificateId": "C_SOON_6",
+    "name": "expiring-soon-6.psb.in",
+    "certificateName": "expiring-soon-6.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "DigiCert",
+    "expiresIn": 18,
+    "remainingDays": 18,
+    "expiryDate": "2026-08-06",
+    "status": "Expiring Soon",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_soon_7",
+    "certificateId": "C_SOON_7",
+    "name": "expiring-soon-7.psb.in",
+    "certificateName": "expiring-soon-7.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 22,
+    "remainingDays": 22,
+    "expiryDate": "2026-08-07",
+    "status": "Expiring Soon",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_soon_8",
+    "certificateId": "C_SOON_8",
+    "name": "expiring-soon-8.psb.in",
+    "certificateName": "expiring-soon-8.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Sectigo",
+    "expiresIn": 25,
+    "remainingDays": 25,
+    "expiryDate": "2026-08-08",
+    "status": "Expiring Soon",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_soon_9",
+    "certificateId": "C_SOON_9",
+    "name": "expiring-soon-9.psb.in",
+    "certificateName": "expiring-soon-9.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 29,
+    "remainingDays": 29,
+    "expiryDate": "2026-08-09",
+    "status": "Expiring Soon",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_1",
+    "certificateId": "C_ACT_1",
+    "name": "secure-cert-1.psb.in",
+    "certificateName": "secure-cert-1.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "GlobalSign",
+    "expiresIn": 48,
+    "remainingDays": 48,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_2",
+    "certificateId": "C_ACT_2",
+    "name": "secure-cert-2.psb.in",
+    "certificateName": "secure-cert-2.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "DigiCert",
+    "expiresIn": 351,
+    "remainingDays": 351,
+    "expiryDate": "2027-02-15",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_3",
+    "certificateId": "C_ACT_3",
+    "name": "secure-cert-3.psb.in",
+    "certificateName": "secure-cert-3.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 315,
+    "remainingDays": 315,
+    "expiryDate": "2027-02-08",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_4",
+    "certificateId": "C_ACT_4",
+    "name": "secure-cert-4.psb.in",
+    "certificateName": "secure-cert-4.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "DigiCert",
+    "expiresIn": 52,
+    "remainingDays": 52,
+    "expiryDate": "2027-02-01",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_5",
+    "certificateId": "C_ACT_5",
+    "name": "secure-cert-5.psb.in",
+    "certificateName": "secure-cert-5.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "DigiCert",
+    "expiresIn": 118,
+    "remainingDays": 118,
+    "expiryDate": "2027-02-25",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_6",
+    "certificateId": "C_ACT_6",
+    "name": "secure-cert-6.psb.in",
+    "certificateName": "secure-cert-6.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Sectigo",
+    "expiresIn": 365,
+    "remainingDays": 365,
+    "expiryDate": "2027-02-01",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_7",
+    "certificateId": "C_ACT_7",
+    "name": "secure-cert-7.psb.in",
+    "certificateName": "secure-cert-7.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 288,
+    "remainingDays": 288,
+    "expiryDate": "2027-02-08",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_8",
+    "certificateId": "C_ACT_8",
+    "name": "secure-cert-8.psb.in",
+    "certificateName": "secure-cert-8.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Entrust",
+    "expiresIn": 278,
+    "remainingDays": 278,
+    "expiryDate": "2027-02-27",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_9",
+    "certificateId": "C_ACT_9",
+    "name": "secure-cert-9.psb.in",
+    "certificateName": "secure-cert-9.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "DigiCert",
+    "expiresIn": 143,
+    "remainingDays": 143,
+    "expiryDate": "2027-02-15",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_10",
+    "certificateId": "C_ACT_10",
+    "name": "secure-cert-10.psb.in",
+    "certificateName": "secure-cert-10.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Sectigo",
+    "expiresIn": 177,
+    "remainingDays": 177,
+    "expiryDate": "2027-02-10",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_11",
+    "certificateId": "C_ACT_11",
+    "name": "secure-cert-11.psb.in",
+    "certificateName": "secure-cert-11.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "GlobalSign",
+    "expiresIn": 315,
+    "remainingDays": 315,
+    "expiryDate": "2027-02-02",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_12",
+    "certificateId": "C_ACT_12",
+    "name": "secure-cert-12.psb.in",
+    "certificateName": "secure-cert-12.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 145,
+    "remainingDays": 145,
+    "expiryDate": "2027-02-22",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_13",
+    "certificateId": "C_ACT_13",
+    "name": "secure-cert-13.psb.in",
+    "certificateName": "secure-cert-13.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "DigiCert",
+    "expiresIn": 260,
+    "remainingDays": 260,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_14",
+    "certificateId": "C_ACT_14",
+    "name": "secure-cert-14.psb.in",
+    "certificateName": "secure-cert-14.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "GlobalSign",
+    "expiresIn": 216,
+    "remainingDays": 216,
+    "expiryDate": "2027-02-08",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_15",
+    "certificateId": "C_ACT_15",
+    "name": "secure-cert-15.psb.in",
+    "certificateName": "secure-cert-15.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 74,
+    "remainingDays": 74,
+    "expiryDate": "2027-02-06",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_16",
+    "certificateId": "C_ACT_16",
+    "name": "secure-cert-16.psb.in",
+    "certificateName": "secure-cert-16.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Entrust",
+    "expiresIn": 248,
+    "remainingDays": 248,
+    "expiryDate": "2027-02-18",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_17",
+    "certificateId": "C_ACT_17",
+    "name": "secure-cert-17.psb.in",
+    "certificateName": "secure-cert-17.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "GlobalSign",
+    "expiresIn": 233,
+    "remainingDays": 233,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_18",
+    "certificateId": "C_ACT_18",
+    "name": "secure-cert-18.psb.in",
+    "certificateName": "secure-cert-18.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "GlobalSign",
+    "expiresIn": 43,
+    "remainingDays": 43,
+    "expiryDate": "2027-02-22",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_19",
+    "certificateId": "C_ACT_19",
+    "name": "secure-cert-19.psb.in",
+    "certificateName": "secure-cert-19.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "DigiCert",
+    "expiresIn": 289,
+    "remainingDays": 289,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_20",
+    "certificateId": "C_ACT_20",
+    "name": "secure-cert-20.psb.in",
+    "certificateName": "secure-cert-20.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 342,
+    "remainingDays": 342,
+    "expiryDate": "2027-02-23",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_21",
+    "certificateId": "C_ACT_21",
+    "name": "secure-cert-21.psb.in",
+    "certificateName": "secure-cert-21.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Sectigo",
+    "expiresIn": 142,
+    "remainingDays": 142,
+    "expiryDate": "2027-02-26",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_22",
+    "certificateId": "C_ACT_22",
+    "name": "secure-cert-22.psb.in",
+    "certificateName": "secure-cert-22.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 300,
+    "remainingDays": 300,
+    "expiryDate": "2027-02-14",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_23",
+    "certificateId": "C_ACT_23",
+    "name": "secure-cert-23.psb.in",
+    "certificateName": "secure-cert-23.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Sectigo",
+    "expiresIn": 65,
+    "remainingDays": 65,
+    "expiryDate": "2027-02-08",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_24",
+    "certificateId": "C_ACT_24",
+    "name": "secure-cert-24.psb.in",
+    "certificateName": "secure-cert-24.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "DigiCert",
+    "expiresIn": 297,
+    "remainingDays": 297,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_25",
+    "certificateId": "C_ACT_25",
+    "name": "secure-cert-25.psb.in",
+    "certificateName": "secure-cert-25.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Entrust",
+    "expiresIn": 232,
+    "remainingDays": 232,
+    "expiryDate": "2027-02-07",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_26",
+    "certificateId": "C_ACT_26",
+    "name": "secure-cert-26.psb.in",
+    "certificateName": "secure-cert-26.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "DigiCert",
+    "expiresIn": 194,
+    "remainingDays": 194,
+    "expiryDate": "2027-02-28",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_27",
+    "certificateId": "C_ACT_27",
+    "name": "secure-cert-27.psb.in",
+    "certificateName": "secure-cert-27.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "DigiCert",
+    "expiresIn": 45,
+    "remainingDays": 45,
+    "expiryDate": "2027-02-22",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_28",
+    "certificateId": "C_ACT_28",
+    "name": "secure-cert-28.psb.in",
+    "certificateName": "secure-cert-28.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "DigiCert",
+    "expiresIn": 124,
+    "remainingDays": 124,
+    "expiryDate": "2027-02-02",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_29",
+    "certificateId": "C_ACT_29",
+    "name": "secure-cert-29.psb.in",
+    "certificateName": "secure-cert-29.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Entrust",
+    "expiresIn": 98,
+    "remainingDays": 98,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_30",
+    "certificateId": "C_ACT_30",
+    "name": "secure-cert-30.psb.in",
+    "certificateName": "secure-cert-30.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 170,
+    "remainingDays": 170,
+    "expiryDate": "2027-02-13",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_31",
+    "certificateId": "C_ACT_31",
+    "name": "secure-cert-31.psb.in",
+    "certificateName": "secure-cert-31.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "GlobalSign",
+    "expiresIn": 264,
+    "remainingDays": 264,
+    "expiryDate": "2027-02-26",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_32",
+    "certificateId": "C_ACT_32",
+    "name": "secure-cert-32.psb.in",
+    "certificateName": "secure-cert-32.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Entrust",
+    "expiresIn": 365,
+    "remainingDays": 365,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_33",
+    "certificateId": "C_ACT_33",
+    "name": "secure-cert-33.psb.in",
+    "certificateName": "secure-cert-33.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "DigiCert",
+    "expiresIn": 263,
+    "remainingDays": 263,
+    "expiryDate": "2027-02-10",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_34",
+    "certificateId": "C_ACT_34",
+    "name": "secure-cert-34.psb.in",
+    "certificateName": "secure-cert-34.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Entrust",
+    "expiresIn": 74,
+    "remainingDays": 74,
+    "expiryDate": "2027-02-20",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_35",
+    "certificateId": "C_ACT_35",
+    "name": "secure-cert-35.psb.in",
+    "certificateName": "secure-cert-35.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "DigiCert",
+    "expiresIn": 332,
+    "remainingDays": 332,
+    "expiryDate": "2027-02-18",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_36",
+    "certificateId": "C_ACT_36",
+    "name": "secure-cert-36.psb.in",
+    "certificateName": "secure-cert-36.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Entrust",
+    "expiresIn": 302,
+    "remainingDays": 302,
+    "expiryDate": "2027-02-19",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_37",
+    "certificateId": "C_ACT_37",
+    "name": "secure-cert-37.psb.in",
+    "certificateName": "secure-cert-37.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "DigiCert",
+    "expiresIn": 132,
+    "remainingDays": 132,
+    "expiryDate": "2027-02-01",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_38",
+    "certificateId": "C_ACT_38",
+    "name": "secure-cert-38.psb.in",
+    "certificateName": "secure-cert-38.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "DigiCert",
+    "expiresIn": 235,
+    "remainingDays": 235,
+    "expiryDate": "2027-02-19",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_39",
+    "certificateId": "C_ACT_39",
+    "name": "secure-cert-39.psb.in",
+    "certificateName": "secure-cert-39.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 58,
+    "remainingDays": 58,
+    "expiryDate": "2027-02-25",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_40",
+    "certificateId": "C_ACT_40",
+    "name": "secure-cert-40.psb.in",
+    "certificateName": "secure-cert-40.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 52,
+    "remainingDays": 52,
+    "expiryDate": "2027-02-26",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_41",
+    "certificateId": "C_ACT_41",
+    "name": "secure-cert-41.psb.in",
+    "certificateName": "secure-cert-41.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 363,
+    "remainingDays": 363,
+    "expiryDate": "2027-02-09",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_42",
+    "certificateId": "C_ACT_42",
+    "name": "secure-cert-42.psb.in",
+    "certificateName": "secure-cert-42.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "GlobalSign",
+    "expiresIn": 68,
+    "remainingDays": 68,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_43",
+    "certificateId": "C_ACT_43",
+    "name": "secure-cert-43.psb.in",
+    "certificateName": "secure-cert-43.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Entrust",
+    "expiresIn": 326,
+    "remainingDays": 326,
+    "expiryDate": "2027-02-14",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_44",
+    "certificateId": "C_ACT_44",
+    "name": "secure-cert-44.psb.in",
+    "certificateName": "secure-cert-44.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "DigiCert",
+    "expiresIn": 338,
+    "remainingDays": 338,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_45",
+    "certificateId": "C_ACT_45",
+    "name": "secure-cert-45.psb.in",
+    "certificateName": "secure-cert-45.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "GlobalSign",
+    "expiresIn": 57,
+    "remainingDays": 57,
+    "expiryDate": "2027-02-06",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_46",
+    "certificateId": "C_ACT_46",
+    "name": "secure-cert-46.psb.in",
+    "certificateName": "secure-cert-46.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 133,
+    "remainingDays": 133,
+    "expiryDate": "2027-02-10",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_47",
+    "certificateId": "C_ACT_47",
+    "name": "secure-cert-47.psb.in",
+    "certificateName": "secure-cert-47.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Entrust",
+    "expiresIn": 240,
+    "remainingDays": 240,
+    "expiryDate": "2027-02-25",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_48",
+    "certificateId": "C_ACT_48",
+    "name": "secure-cert-48.psb.in",
+    "certificateName": "secure-cert-48.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Sectigo",
+    "expiresIn": 67,
+    "remainingDays": 67,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_49",
+    "certificateId": "C_ACT_49",
+    "name": "secure-cert-49.psb.in",
+    "certificateName": "secure-cert-49.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "GlobalSign",
+    "expiresIn": 206,
+    "remainingDays": 206,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_50",
+    "certificateId": "C_ACT_50",
+    "name": "secure-cert-50.psb.in",
+    "certificateName": "secure-cert-50.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 219,
+    "remainingDays": 219,
+    "expiryDate": "2027-02-08",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_51",
+    "certificateId": "C_ACT_51",
+    "name": "secure-cert-51.psb.in",
+    "certificateName": "secure-cert-51.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 181,
+    "remainingDays": 181,
+    "expiryDate": "2027-02-06",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_52",
+    "certificateId": "C_ACT_52",
+    "name": "secure-cert-52.psb.in",
+    "certificateName": "secure-cert-52.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 153,
+    "remainingDays": 153,
+    "expiryDate": "2027-02-26",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_53",
+    "certificateId": "C_ACT_53",
+    "name": "secure-cert-53.psb.in",
+    "certificateName": "secure-cert-53.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "DigiCert",
+    "expiresIn": 183,
+    "remainingDays": 183,
+    "expiryDate": "2027-02-06",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_54",
+    "certificateId": "C_ACT_54",
+    "name": "secure-cert-54.psb.in",
+    "certificateName": "secure-cert-54.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 171,
+    "remainingDays": 171,
+    "expiryDate": "2027-02-06",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_55",
+    "certificateId": "C_ACT_55",
+    "name": "secure-cert-55.psb.in",
+    "certificateName": "secure-cert-55.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 234,
+    "remainingDays": 234,
+    "expiryDate": "2027-02-17",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_56",
+    "certificateId": "C_ACT_56",
+    "name": "secure-cert-56.psb.in",
+    "certificateName": "secure-cert-56.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Sectigo",
+    "expiresIn": 159,
+    "remainingDays": 159,
+    "expiryDate": "2027-02-15",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_57",
+    "certificateId": "C_ACT_57",
+    "name": "secure-cert-57.psb.in",
+    "certificateName": "secure-cert-57.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Entrust",
+    "expiresIn": 95,
+    "remainingDays": 95,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_58",
+    "certificateId": "C_ACT_58",
+    "name": "secure-cert-58.psb.in",
+    "certificateName": "secure-cert-58.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "DigiCert",
+    "expiresIn": 35,
+    "remainingDays": 35,
+    "expiryDate": "2027-02-05",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_59",
+    "certificateId": "C_ACT_59",
+    "name": "secure-cert-59.psb.in",
+    "certificateName": "secure-cert-59.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Entrust",
+    "expiresIn": 245,
+    "remainingDays": 245,
+    "expiryDate": "2027-02-22",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_60",
+    "certificateId": "C_ACT_60",
+    "name": "secure-cert-60.psb.in",
+    "certificateName": "secure-cert-60.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Sectigo",
+    "expiresIn": 50,
+    "remainingDays": 50,
+    "expiryDate": "2027-02-26",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_61",
+    "certificateId": "C_ACT_61",
+    "name": "secure-cert-61.psb.in",
+    "certificateName": "secure-cert-61.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Sectigo",
+    "expiresIn": 229,
+    "remainingDays": 229,
+    "expiryDate": "2027-02-02",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_62",
+    "certificateId": "C_ACT_62",
+    "name": "secure-cert-62.psb.in",
+    "certificateName": "secure-cert-62.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "GlobalSign",
+    "expiresIn": 82,
+    "remainingDays": 82,
+    "expiryDate": "2027-02-04",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_63",
+    "certificateId": "C_ACT_63",
+    "name": "secure-cert-63.psb.in",
+    "certificateName": "secure-cert-63.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Sectigo",
+    "expiresIn": 281,
+    "remainingDays": 281,
+    "expiryDate": "2027-02-04",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_64",
+    "certificateId": "C_ACT_64",
+    "name": "secure-cert-64.psb.in",
+    "certificateName": "secure-cert-64.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "GlobalSign",
+    "expiresIn": 198,
+    "remainingDays": 198,
+    "expiryDate": "2027-02-20",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_65",
+    "certificateId": "C_ACT_65",
+    "name": "secure-cert-65.psb.in",
+    "certificateName": "secure-cert-65.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 55,
+    "remainingDays": 55,
+    "expiryDate": "2027-02-09",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_66",
+    "certificateId": "C_ACT_66",
+    "name": "secure-cert-66.psb.in",
+    "certificateName": "secure-cert-66.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Entrust",
+    "expiresIn": 254,
+    "remainingDays": 254,
+    "expiryDate": "2027-02-22",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_67",
+    "certificateId": "C_ACT_67",
+    "name": "secure-cert-67.psb.in",
+    "certificateName": "secure-cert-67.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Sectigo",
+    "expiresIn": 280,
+    "remainingDays": 280,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_68",
+    "certificateId": "C_ACT_68",
+    "name": "secure-cert-68.psb.in",
+    "certificateName": "secure-cert-68.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Sectigo",
+    "expiresIn": 270,
+    "remainingDays": 270,
+    "expiryDate": "2027-02-23",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_69",
+    "certificateId": "C_ACT_69",
+    "name": "secure-cert-69.psb.in",
+    "certificateName": "secure-cert-69.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "GlobalSign",
+    "expiresIn": 149,
+    "remainingDays": 149,
+    "expiryDate": "2027-02-09",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_70",
+    "certificateId": "C_ACT_70",
+    "name": "secure-cert-70.psb.in",
+    "certificateName": "secure-cert-70.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Entrust",
+    "expiresIn": 183,
+    "remainingDays": 183,
+    "expiryDate": "2027-02-21",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_71",
+    "certificateId": "C_ACT_71",
+    "name": "secure-cert-71.psb.in",
+    "certificateName": "secure-cert-71.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "Entrust",
+    "expiresIn": 224,
+    "remainingDays": 224,
+    "expiryDate": "2027-02-12",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_72",
+    "certificateId": "C_ACT_72",
+    "name": "secure-cert-72.psb.in",
+    "certificateName": "secure-cert-72.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Entrust",
+    "expiresIn": 181,
+    "remainingDays": 181,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_73",
+    "certificateId": "C_ACT_73",
+    "name": "secure-cert-73.psb.in",
+    "certificateName": "secure-cert-73.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Sectigo",
+    "expiresIn": 219,
+    "remainingDays": 219,
+    "expiryDate": "2027-02-22",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_74",
+    "certificateId": "C_ACT_74",
+    "name": "secure-cert-74.psb.in",
+    "certificateName": "secure-cert-74.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 61,
+    "remainingDays": 61,
+    "expiryDate": "2027-02-17",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_75",
+    "certificateId": "C_ACT_75",
+    "name": "secure-cert-75.psb.in",
+    "certificateName": "secure-cert-75.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Entrust",
+    "expiresIn": 39,
+    "remainingDays": 39,
+    "expiryDate": "2027-02-23",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_76",
+    "certificateId": "C_ACT_76",
+    "name": "secure-cert-76.psb.in",
+    "certificateName": "secure-cert-76.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "GlobalSign",
+    "expiresIn": 246,
+    "remainingDays": 246,
+    "expiryDate": "2027-02-25",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_77",
+    "certificateId": "C_ACT_77",
+    "name": "secure-cert-77.psb.in",
+    "certificateName": "secure-cert-77.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "DigiCert",
+    "expiresIn": 249,
+    "remainingDays": 249,
+    "expiryDate": "2027-02-25",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_78",
+    "certificateId": "C_ACT_78",
+    "name": "secure-cert-78.psb.in",
+    "certificateName": "secure-cert-78.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Sectigo",
+    "expiresIn": 267,
+    "remainingDays": 267,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_79",
+    "certificateId": "C_ACT_79",
+    "name": "secure-cert-79.psb.in",
+    "certificateName": "secure-cert-79.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "Sectigo",
+    "expiresIn": 193,
+    "remainingDays": 193,
+    "expiryDate": "2027-02-15",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_80",
+    "certificateId": "C_ACT_80",
+    "name": "secure-cert-80.psb.in",
+    "certificateName": "secure-cert-80.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Entrust",
+    "expiresIn": 134,
+    "remainingDays": 134,
+    "expiryDate": "2027-02-03",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_81",
+    "certificateId": "C_ACT_81",
+    "name": "secure-cert-81.psb.in",
+    "certificateName": "secure-cert-81.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Entrust",
+    "expiresIn": 140,
+    "remainingDays": 140,
+    "expiryDate": "2027-02-08",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_82",
+    "certificateId": "C_ACT_82",
+    "name": "secure-cert-82.psb.in",
+    "certificateName": "secure-cert-82.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Sectigo",
+    "expiresIn": 213,
+    "remainingDays": 213,
+    "expiryDate": "2027-02-02",
+    "status": "Active",
+    "owner": "Web Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "c_act_83",
+    "certificateId": "C_ACT_83",
+    "name": "secure-cert-83.psb.in",
+    "certificateName": "secure-cert-83.psb.in",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "issuer": "GlobalSign",
+    "expiresIn": 154,
+    "remainingDays": 154,
+    "expiryDate": "2027-02-18",
+    "status": "Active",
+    "owner": "Platform Team",
+    "type": "TLS",
+    "services": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_84",
+    "certificateId": "C_ACT_84",
+    "name": "secure-cert-84.psb.in",
+    "certificateName": "secure-cert-84.psb.in",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "issuer": "Entrust",
+    "expiresIn": 232,
+    "remainingDays": 232,
+    "expiryDate": "2027-02-16",
+    "status": "Active",
+    "owner": "DevOps Team",
+    "type": "TLS",
+    "services": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "c_act_85",
+    "certificateId": "C_ACT_85",
+    "name": "secure-cert-85.psb.in",
+    "certificateName": "secure-cert-85.psb.in",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "issuer": "DigiCert",
+    "expiresIn": 66,
+    "remainingDays": 66,
+    "expiryDate": "2027-02-17",
+    "status": "Active",
+    "owner": "Digital Banking",
+    "type": "TLS",
+    "services": [
+      "UPI"
+    ]
+  },
+  {
+    "id": "c_act_86",
+    "certificateId": "C_ACT_86",
+    "name": "secure-cert-86.psb.in",
+    "certificateName": "secure-cert-86.psb.in",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "issuer": "Sectigo",
+    "expiresIn": 175,
+    "remainingDays": 175,
+    "expiryDate": "2027-02-13",
+    "status": "Active",
+    "owner": "ATM Operations",
+    "type": "TLS",
+    "services": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "c_act_87",
+    "certificateId": "C_ACT_87",
+    "name": "secure-cert-87.psb.in",
+    "certificateName": "secure-cert-87.psb.in",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "issuer": "Let's Encrypt",
+    "expiresIn": 357,
+    "remainingDays": 357,
+    "expiryDate": "2027-02-01",
+    "status": "Active",
+    "owner": "Payments Team",
+    "type": "TLS",
+    "services": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "c_act_88",
+    "certificateId": "C_ACT_88",
+    "name": "secure-cert-88.psb.in",
+    "certificateName": "secure-cert-88.psb.in",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "issuer": "Entrust",
+    "expiresIn": 234,
+    "remainingDays": 234,
+    "expiryDate": "2027-02-21",
+    "status": "Active",
+    "owner": "Mobile Team",
+    "type": "TLS",
+    "services": [
+      "Mobile Banking"
+    ]
+  }
 ]

@@ -1,10 +1,879 @@
 [
-  { "id": "v1", "cve": "CVE-2025-1111", "severity": "Critical", "asset": "UPI Gateway", "assetId": "a1", "description": "Remote code execution in API Gateway reverse proxy", "cvss": 9.8, "status": "Open", "daysOpen": 12, "affectedServices": ["UPI", "Mobile Banking"] },
-  { "id": "v2", "cve": "CVE-2024-4040", "severity": "Critical", "asset": "Mobile Banking App", "assetId": "a4", "description": "Log4j Remote Code Execution vulnerability", "cvss": 10.0, "status": "Open", "daysOpen": 7, "affectedServices": ["Mobile Banking", "UPI", "Net Banking"] },
-  { "id": "v3", "cve": "CVE-2024-3094", "severity": "High", "asset": "API Gateway (Kong)", "assetId": "a5", "description": "XZ Utils backdoor in compression library", "cvss": 8.5, "status": "In Progress", "daysOpen": 20, "affectedServices": ["UPI", "ATM", "AEPS", "Mobile Banking", "Net Banking"] },
-  { "id": "v4", "cve": "CVE-2025-0890", "severity": "High", "asset": "ATM Switch", "assetId": "a2", "description": "Buffer overflow in network device firmware", "cvss": 7.9, "status": "Open", "daysOpen": 5, "affectedServices": ["ATM"] },
-  { "id": "v5", "cve": "CVE-2024-6387", "severity": "Critical", "asset": "Kubernetes Cluster", "assetId": "a6", "description": "OpenSSH regreSSHion race condition RCE", "cvss": 8.1, "status": "Open", "daysOpen": 30, "affectedServices": ["UPI", "AEPS", "Mobile Banking"] },
-  { "id": "v6", "cve": "CVE-2024-9999", "severity": "High", "asset": "AEPS Service", "assetId": "a3", "description": "Authentication bypass in payment microservice", "cvss": 7.5, "status": "Open", "daysOpen": 3, "affectedServices": ["AEPS"] },
-  { "id": "v7", "cve": "CVE-2025-2222", "severity": "Medium", "asset": "Net Banking Portal", "assetId": "a8", "description": "Cross-site scripting in session management", "cvss": 6.1, "status": "Open", "daysOpen": 15, "affectedServices": ["Net Banking"] },
-  { "id": "v8", "cve": "CVE-2024-8888", "severity": "High", "asset": "Mobile Banking App", "assetId": "a4", "description": "Insecure deserialization in REST API layer", "cvss": 7.8, "status": "Open", "daysOpen": 8, "affectedServices": ["Mobile Banking"] }
+  {
+    "id": "v_crit_1",
+    "cve": "CVE-2025-1000",
+    "cveId": "CVE-2025-1000",
+    "severity": "Critical",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "description": "Critical vulnerability allowing remote code execution or authorization bypass in UPI Gateway.",
+    "cvss": 9.4,
+    "riskScore": 9.4,
+    "status": "Open",
+    "daysOpen": 15,
+    "affectedServices": [
+      "UPI",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_crit_2",
+    "cve": "CVE-2025-1001",
+    "cveId": "CVE-2025-1001",
+    "severity": "Critical",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "description": "Critical vulnerability allowing remote code execution or authorization bypass in ATM Switch.",
+    "cvss": 9.9,
+    "riskScore": 9.9,
+    "status": "Open",
+    "daysOpen": 1,
+    "affectedServices": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "v_crit_3",
+    "cve": "CVE-2025-1002",
+    "cveId": "CVE-2025-1002",
+    "severity": "Critical",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "description": "Critical vulnerability allowing remote code execution or authorization bypass in AEPS Service.",
+    "cvss": 9.1,
+    "riskScore": 9.1,
+    "status": "Open",
+    "daysOpen": 2,
+    "affectedServices": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "v_crit_4",
+    "cve": "CVE-2025-1003",
+    "cveId": "CVE-2025-1003",
+    "severity": "Critical",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "Critical vulnerability allowing remote code execution or authorization bypass in Mobile Banking App.",
+    "cvss": 9.9,
+    "riskScore": 9.9,
+    "status": "Open",
+    "daysOpen": 14,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_crit_5",
+    "cve": "CVE-2025-1004",
+    "cveId": "CVE-2025-1004",
+    "severity": "Critical",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "description": "Critical vulnerability allowing remote code execution or authorization bypass in API Gateway (Kong).",
+    "cvss": 9.9,
+    "riskScore": 9.9,
+    "status": "Open",
+    "daysOpen": 14,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_high_1",
+    "cve": "CVE-2024-2000",
+    "cveId": "CVE-2024-2000",
+    "severity": "High",
+    "asset": "Kubernetes Cluster",
+    "assetId": "a6",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Kubernetes Cluster.",
+    "cvss": 8.0,
+    "riskScore": 8.0,
+    "status": "In Progress",
+    "daysOpen": 17,
+    "affectedServices": [
+      "UPI",
+      "AEPS",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_high_2",
+    "cve": "CVE-2024-2001",
+    "cveId": "CVE-2024-2001",
+    "severity": "High",
+    "asset": "Core Banking DB",
+    "assetId": "a7",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Core Banking DB.",
+    "cvss": 7.0,
+    "riskScore": 7.0,
+    "status": "Open",
+    "daysOpen": 20,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_high_3",
+    "cve": "CVE-2024-2002",
+    "cveId": "CVE-2024-2002",
+    "severity": "High",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Net Banking Portal.",
+    "cvss": 7.7,
+    "riskScore": 7.7,
+    "status": "Open",
+    "daysOpen": 26,
+    "affectedServices": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_high_4",
+    "cve": "CVE-2024-2003",
+    "cveId": "CVE-2024-2003",
+    "severity": "High",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in UPI Gateway.",
+    "cvss": 8.6,
+    "riskScore": 8.6,
+    "status": "Open",
+    "daysOpen": 21,
+    "affectedServices": [
+      "UPI",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_high_5",
+    "cve": "CVE-2024-2004",
+    "cveId": "CVE-2024-2004",
+    "severity": "High",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in ATM Switch.",
+    "cvss": 8.0,
+    "riskScore": 8.0,
+    "status": "Open",
+    "daysOpen": 22,
+    "affectedServices": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "v_high_6",
+    "cve": "CVE-2024-2005",
+    "cveId": "CVE-2024-2005",
+    "severity": "High",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in AEPS Service.",
+    "cvss": 8.2,
+    "riskScore": 8.2,
+    "status": "In Progress",
+    "daysOpen": 18,
+    "affectedServices": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "v_high_7",
+    "cve": "CVE-2024-2006",
+    "cveId": "CVE-2024-2006",
+    "severity": "High",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Mobile Banking App.",
+    "cvss": 8.3,
+    "riskScore": 8.3,
+    "status": "In Progress",
+    "daysOpen": 11,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_high_8",
+    "cve": "CVE-2024-2007",
+    "cveId": "CVE-2024-2007",
+    "severity": "High",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in API Gateway (Kong).",
+    "cvss": 8.7,
+    "riskScore": 8.7,
+    "status": "In Progress",
+    "daysOpen": 10,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_high_9",
+    "cve": "CVE-2024-2008",
+    "cveId": "CVE-2024-2008",
+    "severity": "High",
+    "asset": "Kubernetes Cluster",
+    "assetId": "a6",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Kubernetes Cluster.",
+    "cvss": 8.8,
+    "riskScore": 8.8,
+    "status": "Open",
+    "daysOpen": 12,
+    "affectedServices": [
+      "UPI",
+      "AEPS",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_high_10",
+    "cve": "CVE-2024-2009",
+    "cveId": "CVE-2024-2009",
+    "severity": "High",
+    "asset": "Core Banking DB",
+    "assetId": "a7",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Core Banking DB.",
+    "cvss": 7.2,
+    "riskScore": 7.2,
+    "status": "Open",
+    "daysOpen": 10,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_high_11",
+    "cve": "CVE-2024-2010",
+    "cveId": "CVE-2024-2010",
+    "severity": "High",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Net Banking Portal.",
+    "cvss": 8.3,
+    "riskScore": 8.3,
+    "status": "Open",
+    "daysOpen": 11,
+    "affectedServices": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_high_12",
+    "cve": "CVE-2024-2011",
+    "cveId": "CVE-2024-2011",
+    "severity": "High",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in UPI Gateway.",
+    "cvss": 8.9,
+    "riskScore": 8.9,
+    "status": "Open",
+    "daysOpen": 28,
+    "affectedServices": [
+      "UPI",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_high_13",
+    "cve": "CVE-2024-2012",
+    "cveId": "CVE-2024-2012",
+    "severity": "High",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in ATM Switch.",
+    "cvss": 7.6,
+    "riskScore": 7.6,
+    "status": "In Progress",
+    "daysOpen": 25,
+    "affectedServices": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "v_high_14",
+    "cve": "CVE-2024-2013",
+    "cveId": "CVE-2024-2013",
+    "severity": "High",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in AEPS Service.",
+    "cvss": 8.3,
+    "riskScore": 8.3,
+    "status": "Open",
+    "daysOpen": 24,
+    "affectedServices": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "v_high_15",
+    "cve": "CVE-2024-2014",
+    "cveId": "CVE-2024-2014",
+    "severity": "High",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "High severity vulnerability causing potential denial of service or privilege escalation in Mobile Banking App.",
+    "cvss": 7.6,
+    "riskScore": 7.6,
+    "status": "Open",
+    "daysOpen": 11,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_1",
+    "cve": "CVE-2024-3000",
+    "cveId": "CVE-2024-3000",
+    "severity": "Medium",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in UPI Gateway.",
+    "cvss": 5.8,
+    "riskScore": 5.8,
+    "status": "Resolved",
+    "daysOpen": 22,
+    "affectedServices": [
+      "UPI",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_med_2",
+    "cve": "CVE-2024-3001",
+    "cveId": "CVE-2024-3001",
+    "severity": "Medium",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in ATM Switch.",
+    "cvss": 4.8,
+    "riskScore": 4.8,
+    "status": "Open",
+    "daysOpen": 18,
+    "affectedServices": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "v_med_3",
+    "cve": "CVE-2024-3002",
+    "cveId": "CVE-2024-3002",
+    "severity": "Medium",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in AEPS Service.",
+    "cvss": 5.7,
+    "riskScore": 5.7,
+    "status": "Open",
+    "daysOpen": 22,
+    "affectedServices": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "v_med_4",
+    "cve": "CVE-2024-3003",
+    "cveId": "CVE-2024-3003",
+    "severity": "Medium",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Mobile Banking App.",
+    "cvss": 5.5,
+    "riskScore": 5.5,
+    "status": "Open",
+    "daysOpen": 53,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_5",
+    "cve": "CVE-2024-3004",
+    "cveId": "CVE-2024-3004",
+    "severity": "Medium",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in API Gateway (Kong).",
+    "cvss": 6.7,
+    "riskScore": 6.7,
+    "status": "Resolved",
+    "daysOpen": 37,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_6",
+    "cve": "CVE-2024-3005",
+    "cveId": "CVE-2024-3005",
+    "severity": "Medium",
+    "asset": "Kubernetes Cluster",
+    "assetId": "a6",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Kubernetes Cluster.",
+    "cvss": 5.2,
+    "riskScore": 5.2,
+    "status": "Resolved",
+    "daysOpen": 35,
+    "affectedServices": [
+      "UPI",
+      "AEPS",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_med_7",
+    "cve": "CVE-2024-3006",
+    "cveId": "CVE-2024-3006",
+    "severity": "Medium",
+    "asset": "Core Banking DB",
+    "assetId": "a7",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Core Banking DB.",
+    "cvss": 4.9,
+    "riskScore": 4.9,
+    "status": "Open",
+    "daysOpen": 20,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_8",
+    "cve": "CVE-2024-3007",
+    "cveId": "CVE-2024-3007",
+    "severity": "Medium",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Net Banking Portal.",
+    "cvss": 4.5,
+    "riskScore": 4.5,
+    "status": "Open",
+    "daysOpen": 27,
+    "affectedServices": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_9",
+    "cve": "CVE-2024-3008",
+    "cveId": "CVE-2024-3008",
+    "severity": "Medium",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in UPI Gateway.",
+    "cvss": 4.6,
+    "riskScore": 4.6,
+    "status": "Open",
+    "daysOpen": 38,
+    "affectedServices": [
+      "UPI",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_med_10",
+    "cve": "CVE-2024-3009",
+    "cveId": "CVE-2024-3009",
+    "severity": "Medium",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in ATM Switch.",
+    "cvss": 6.0,
+    "riskScore": 6.0,
+    "status": "Open",
+    "daysOpen": 36,
+    "affectedServices": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "v_med_11",
+    "cve": "CVE-2024-3010",
+    "cveId": "CVE-2024-3010",
+    "severity": "Medium",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in AEPS Service.",
+    "cvss": 5.6,
+    "riskScore": 5.6,
+    "status": "Resolved",
+    "daysOpen": 38,
+    "affectedServices": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "v_med_12",
+    "cve": "CVE-2024-3011",
+    "cveId": "CVE-2024-3011",
+    "severity": "Medium",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Mobile Banking App.",
+    "cvss": 6.7,
+    "riskScore": 6.7,
+    "status": "In Progress",
+    "daysOpen": 22,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_13",
+    "cve": "CVE-2024-3012",
+    "cveId": "CVE-2024-3012",
+    "severity": "Medium",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in API Gateway (Kong).",
+    "cvss": 5.0,
+    "riskScore": 5.0,
+    "status": "Resolved",
+    "daysOpen": 58,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_14",
+    "cve": "CVE-2024-3013",
+    "cveId": "CVE-2024-3013",
+    "severity": "Medium",
+    "asset": "Kubernetes Cluster",
+    "assetId": "a6",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Kubernetes Cluster.",
+    "cvss": 5.3,
+    "riskScore": 5.3,
+    "status": "Resolved",
+    "daysOpen": 54,
+    "affectedServices": [
+      "UPI",
+      "AEPS",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_med_15",
+    "cve": "CVE-2024-3014",
+    "cveId": "CVE-2024-3014",
+    "severity": "Medium",
+    "asset": "Core Banking DB",
+    "assetId": "a7",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Core Banking DB.",
+    "cvss": 4.3,
+    "riskScore": 4.3,
+    "status": "In Progress",
+    "daysOpen": 10,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_16",
+    "cve": "CVE-2024-3015",
+    "cveId": "CVE-2024-3015",
+    "severity": "Medium",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Net Banking Portal.",
+    "cvss": 6.8,
+    "riskScore": 6.8,
+    "status": "Open",
+    "daysOpen": 48,
+    "affectedServices": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_med_17",
+    "cve": "CVE-2024-3016",
+    "cveId": "CVE-2024-3016",
+    "severity": "Medium",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in UPI Gateway.",
+    "cvss": 4.8,
+    "riskScore": 4.8,
+    "status": "Resolved",
+    "daysOpen": 24,
+    "affectedServices": [
+      "UPI",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_med_18",
+    "cve": "CVE-2024-3017",
+    "cveId": "CVE-2024-3017",
+    "severity": "Medium",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in ATM Switch.",
+    "cvss": 5.9,
+    "riskScore": 5.9,
+    "status": "Resolved",
+    "daysOpen": 15,
+    "affectedServices": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "v_med_19",
+    "cve": "CVE-2024-3018",
+    "cveId": "CVE-2024-3018",
+    "severity": "Medium",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in AEPS Service.",
+    "cvss": 6.8,
+    "riskScore": 6.8,
+    "status": "Resolved",
+    "daysOpen": 17,
+    "affectedServices": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "v_med_20",
+    "cve": "CVE-2024-3019",
+    "cveId": "CVE-2024-3019",
+    "severity": "Medium",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "Medium severity vulnerability leading to information disclosure or cross-site scripting in Mobile Banking App.",
+    "cvss": 6.2,
+    "riskScore": 6.2,
+    "status": "Open",
+    "daysOpen": 15,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_low_1",
+    "cve": "CVE-2024-4000",
+    "cveId": "CVE-2024-4000",
+    "severity": "Low",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in Mobile Banking App.",
+    "cvss": 3.5,
+    "riskScore": 3.5,
+    "status": "Resolved",
+    "daysOpen": 36,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_low_2",
+    "cve": "CVE-2024-4001",
+    "cveId": "CVE-2024-4001",
+    "severity": "Low",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in API Gateway (Kong).",
+    "cvss": 3.4,
+    "riskScore": 3.4,
+    "status": "Resolved",
+    "daysOpen": 77,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_low_3",
+    "cve": "CVE-2024-4002",
+    "cveId": "CVE-2024-4002",
+    "severity": "Low",
+    "asset": "Kubernetes Cluster",
+    "assetId": "a6",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in Kubernetes Cluster.",
+    "cvss": 3.8,
+    "riskScore": 3.8,
+    "status": "Resolved",
+    "daysOpen": 49,
+    "affectedServices": [
+      "UPI",
+      "AEPS",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_low_4",
+    "cve": "CVE-2024-4003",
+    "cveId": "CVE-2024-4003",
+    "severity": "Low",
+    "asset": "Core Banking DB",
+    "assetId": "a7",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in Core Banking DB.",
+    "cvss": 2.2,
+    "riskScore": 2.2,
+    "status": "Resolved",
+    "daysOpen": 56,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_low_5",
+    "cve": "CVE-2024-4004",
+    "cveId": "CVE-2024-4004",
+    "severity": "Low",
+    "asset": "Net Banking Portal",
+    "assetId": "a8",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in Net Banking Portal.",
+    "cvss": 2.8,
+    "riskScore": 2.8,
+    "status": "Resolved",
+    "daysOpen": 79,
+    "affectedServices": [
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_low_6",
+    "cve": "CVE-2024-4005",
+    "cveId": "CVE-2024-4005",
+    "severity": "Low",
+    "asset": "UPI Gateway",
+    "assetId": "a1",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in UPI Gateway.",
+    "cvss": 3.4,
+    "riskScore": 3.4,
+    "status": "Resolved",
+    "daysOpen": 80,
+    "affectedServices": [
+      "UPI",
+      "Mobile Banking"
+    ]
+  },
+  {
+    "id": "v_low_7",
+    "cve": "CVE-2024-4006",
+    "cveId": "CVE-2024-4006",
+    "severity": "Low",
+    "asset": "ATM Switch",
+    "assetId": "a2",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in ATM Switch.",
+    "cvss": 2.2,
+    "riskScore": 2.2,
+    "status": "Resolved",
+    "daysOpen": 16,
+    "affectedServices": [
+      "ATM"
+    ]
+  },
+  {
+    "id": "v_low_8",
+    "cve": "CVE-2024-4007",
+    "cveId": "CVE-2024-4007",
+    "severity": "Low",
+    "asset": "AEPS Service",
+    "assetId": "a3",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in AEPS Service.",
+    "cvss": 3.2,
+    "riskScore": 3.2,
+    "status": "Resolved",
+    "daysOpen": 90,
+    "affectedServices": [
+      "AEPS"
+    ]
+  },
+  {
+    "id": "v_low_9",
+    "cve": "CVE-2024-4008",
+    "cveId": "CVE-2024-4008",
+    "severity": "Low",
+    "asset": "Mobile Banking App",
+    "assetId": "a4",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in Mobile Banking App.",
+    "cvss": 1.1,
+    "riskScore": 1.1,
+    "status": "Resolved",
+    "daysOpen": 24,
+    "affectedServices": [
+      "Mobile Banking",
+      "UPI",
+      "Net Banking"
+    ]
+  },
+  {
+    "id": "v_low_10",
+    "cve": "CVE-2024-4009",
+    "cveId": "CVE-2024-4009",
+    "severity": "Low",
+    "asset": "API Gateway (Kong)",
+    "assetId": "a5",
+    "description": "Low risk vulnerability with minimal impact or requiring high complexity exploit in API Gateway (Kong).",
+    "cvss": 1.8,
+    "riskScore": 1.8,
+    "status": "Resolved",
+    "daysOpen": 79,
+    "affectedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ]
+  }
 ]

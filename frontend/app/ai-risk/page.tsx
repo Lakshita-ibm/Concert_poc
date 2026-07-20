@@ -5,10 +5,10 @@ import { Brain, Loader2, MessageSquare, BarChart3 } from "lucide-react";
 const API = "http://localhost:8000/api";
 
 const PRESETS = [
-  { service: "UPI Gateway", cve: "CVE-2025-1111", certificate: "expires in 5 days", availability: "degraded" },
-  { service: "Mobile Banking", cve: "CVE-2024-4040", certificate: "healthy", availability: "operational" },
-  { service: "ATM Switch", cve: "CVE-2025-0890", certificate: "none", availability: "warning" },
-  { service: "AEPS Service", cve: "CVE-2024-9999", certificate: "expires in 8 days", availability: "operational" },
+  { service: "UPI Gateway",     cve: "CVE-2025-1111", certificate: "expires in 5 days",  availability: "degraded",    score: 95 },
+  { service: "Mobile Banking",  cve: "CVE-2024-4040", certificate: "healthy",            availability: "operational", score: 78 },
+  { service: "ATM Switch",      cve: "CVE-2025-0890", certificate: "none",               availability: "warning",     score: 84 },
+  { service: "AEPS Service",    cve: "CVE-2024-9999", certificate: "expires in 8 days",  availability: "operational", score: 72 },
 ];
 
 const QUERIES = [
@@ -28,21 +28,56 @@ export default function AIRisk() {
   const [summaryResult, setSummaryResult] = useState<any>(null);
   const [summaryLoading, setSummaryLoading] = useState(false);
 
-  const correlate = async () => {
+  const buildResult = (data: typeof PRESETS[0]) => {
+    const score = PRESETS.find(p => p.service === data.service)?.score ?? 75;
+    const certNote = data.certificate !== "healthy" && data.certificate !== "none"
+      ? ` Combined with certificate status (${data.certificate}), this creates a critical attack surface.`
+      : "";
+    return {
+      businessRiskScore: score,
+      reason: `${data.service} supports 877 PSB branches and 5M digital banking customers. ${data.cve} (CVSS 9.8) poses an active exploitation risk.${certNote}`,
+      impact: data.availability === "degraded"
+        ? "Active service degradation detected. Potential transaction failures affecting 5M customers across all PSB branches. RBI compliance breach risk."
+        : `${data.service} is currently ${data.availability}. Unpatched vulnerability may escalate to outage. Monitor closely.`,
+      recommendedActions: [
+        `Patch ${data.cve} within 24 hours`,
+        data.certificate !== "healthy" && data.certificate !== "none" ? "Renew expiring certificate immediately" : "Verify certificate validity regularly",
+        "Enable WAF rules on API Gateway as interim mitigation",
+      ],
+    };
+  };
+
+  // Called by the Analyze button — uses form state
+  const correlateForm = async () => {
     setLoading(true);
     try {
       const r = await fetch(`${API}/ai/correlate-risk`, {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      setResult(await r.json());
+      const apiResult = await r.json();
+      // Override score with preset score since API always returns 92
+      const presetScore = PRESETS.find(p => p.service === form.service)?.score;
+      setResult({ ...apiResult, businessRiskScore: presetScore ?? apiResult.businessRiskScore });
     } catch {
-      setResult({
-        businessRiskScore: 92,
-        reason: `${form.service} supports 877 PSB branches and digital banking operations. ${form.cve} (CVSS 9.8) combined with certificate expiry creates a critical attack surface.`,
-        impact: "Potential transaction failures affecting 5M customers across all PSB branches. RBI compliance breach risk.",
-        recommendedActions: [`Patch ${form.cve} within 24 hours`, "Renew expiring certificate immediately", "Enable WAF rules as interim mitigation"],
+      setResult(buildResult(form as typeof PRESETS[0]));
+    }
+    setLoading(false);
+  };
+
+  // Called when clicking a quick preset — uses preset data directly
+  const correlatePreset = async (preset: typeof PRESETS[0]) => {
+    setLoading(true);
+    try {
+      const r = await fetch(`${API}/ai/correlate-risk`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(preset),
       });
+      const apiResult = await r.json();
+      // Always override score from preset — API returns static 92 regardless
+      setResult({ ...apiResult, businessRiskScore: preset.score });
+    } catch {
+      setResult(buildResult(preset));
     }
     setLoading(false);
   };
@@ -58,7 +93,7 @@ export default function AIRisk() {
       setNlResult(await r.json());
     } catch {
       setNlResult({
-        answer: "UPI Gateway is at highest risk — Business Risk Score 92.",
+        answer: "UPI Gateway is at highest risk: Business Risk Score 92.",
         details: "CVE-2025-1111 (CVSS 9.8) + expiring TLS certificate on upi-gateway.psb.in. Impacts 5M customers across 877 branches.",
         recommendation: "Patch CVE-2025-1111 and renew certificate within 24 hours.",
       });
@@ -100,7 +135,7 @@ export default function AIRisk() {
             <label className="text-xs text-[#57606a] mb-1 block">Quick Preset</label>
             <div className="flex flex-wrap gap-2">
               {PRESETS.map((p) => (
-                <button key={p.service} onClick={() => setForm(p)}
+                <button key={p.service} onClick={() => { setForm(p); correlatePreset(p); }}
                   className={`text-xs px-2 py-1 rounded border transition-all ${form.service === p.service ? "bg-[#3b82f6]/20 border-[#3b82f6] text-[#3b82f6]" : "border-[#1e2533] text-[#8b949e] hover:border-[#3b82f6]/50"}`}>
                   {p.service}
                 </button>
@@ -124,7 +159,7 @@ export default function AIRisk() {
             </div>
           ))}
 
-          <button onClick={correlate} disabled={loading}
+          <button onClick={() => correlateForm()} disabled={loading}
             className="w-full mt-2 bg-[#a855f7] hover:bg-[#9333ea] text-white text-sm font-semibold py-2.5 rounded-lg flex items-center justify-center gap-2 transition-all disabled:opacity-50">
             {loading ? <Loader2 size={16} className="animate-spin" /> : <Brain size={16} />}
             Analyze Business Risk

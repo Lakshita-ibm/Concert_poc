@@ -13,6 +13,7 @@ def get_vulns():       return load("vulnerabilities.json")
 def get_certs():       return load("certificates.json")
 def get_incidents():   return load("incidents.json")
 def get_sbom():        return load("sbom.json")
+def get_arena():       return load("arena.json")
 
 def get_dashboard_kpis():
     vulns = get_vulns()

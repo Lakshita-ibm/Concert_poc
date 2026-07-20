@@ -4,44 +4,2071 @@
     "application": "Mobile Banking",
     "version": "4.2.1",
     "components": [
-      { "name": "Spring Boot", "version": "2.7.5", "license": "Apache-2.0", "riskLevel": "Medium", "cve": "CVE-2024-8888", "cvss": 7.8 },
-      { "name": "Log4j", "version": "2.14.1", "license": "Apache-2.0", "riskLevel": "Critical", "cve": "CVE-2024-4040", "cvss": 10.0 },
-      { "name": "OpenSSL", "version": "1.1.1t", "license": "OpenSSL", "riskLevel": "Low", "cve": null, "cvss": null },
-      { "name": "PostgreSQL Driver", "version": "42.5.0", "license": "BSD-2", "riskLevel": "Low", "cve": null, "cvss": null },
-      { "name": "Jackson Databind", "version": "2.13.4", "license": "Apache-2.0", "riskLevel": "Medium", "cve": null, "cvss": null }
+      {
+        "name": "Log4j-1",
+        "version": "8.1.1",
+        "license": "OpenSSL",
+        "riskLevel": "Critical",
+        "cve": "CVE-2025-1500",
+        "cvss": 9.8
+      },
+      {
+        "name": "OpenSSL-2",
+        "version": "1.2.9",
+        "license": "LGPL-2.1",
+        "riskLevel": "High",
+        "cve": "CVE-2024-2500",
+        "cvss": 8.2
+      },
+      {
+        "name": "PostgreSQL Driver-3",
+        "version": "1.9.0",
+        "license": "OpenSSL",
+        "riskLevel": "Medium",
+        "cve": "CVE-2024-3500",
+        "cvss": 6.5
+      },
+      {
+        "name": "Jackson Databind-4",
+        "version": "1.5.2",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-5",
+        "version": "4.1.4",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-6",
+        "version": "6.5.9",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-7",
+        "version": "1.5.4",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-8",
+        "version": "9.3.5",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-9",
+        "version": "7.8.3",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-10",
+        "version": "6.9.2",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-11",
+        "version": "9.8.3",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-12",
+        "version": "4.0.7",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-13",
+        "version": "9.4.2",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-14",
+        "version": "3.0.7",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-15",
+        "version": "1.7.3",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-16",
+        "version": "4.1.0",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-17",
+        "version": "2.7.8",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-18",
+        "version": "5.0.1",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-19",
+        "version": "4.0.5",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-20",
+        "version": "1.4.3",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-21",
+        "version": "1.9.9",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-22",
+        "version": "2.3.9",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-23",
+        "version": "7.3.8",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-24",
+        "version": "1.6.2",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-25",
+        "version": "8.4.0",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Log4j-26",
+        "version": "5.0.9",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "OpenSSL-27",
+        "version": "1.1.4",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "PostgreSQL Driver-28",
+        "version": "8.4.5",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Jackson Databind-29",
+        "version": "2.6.0",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-30",
+        "version": "8.2.0",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-31",
+        "version": "3.7.0",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-32",
+        "version": "9.7.6",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-33",
+        "version": "9.1.9",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-34",
+        "version": "4.5.6",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-35",
+        "version": "5.4.0",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-36",
+        "version": "3.6.1",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-37",
+        "version": "8.8.1",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-38",
+        "version": "5.2.1",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-39",
+        "version": "7.6.9",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-40",
+        "version": "1.4.1",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-41",
+        "version": "4.0.7",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-42",
+        "version": "4.7.4",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-43",
+        "version": "5.6.2",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-44",
+        "version": "5.0.2",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-45",
+        "version": "5.5.5",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-46",
+        "version": "3.3.9",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-47",
+        "version": "1.1.7",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-48",
+        "version": "4.9.1",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-49",
+        "version": "9.6.1",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-50",
+        "version": "9.6.6",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      }
     ],
-    "impactedServices": ["Mobile Banking", "UPI", "API Layer"],
-    "totalComponents": 47,
+    "impactedServices": [
+      "Mobile Banking",
+      "UPI",
+      "API Layer"
+    ],
+    "totalComponents": 50,
     "criticalComponents": 1,
-    "highComponents": 2
+    "highComponents": 1
   },
   {
     "id": "sb2",
     "application": "UPI Gateway",
     "version": "3.1.0",
     "components": [
-      { "name": "Kong Gateway", "version": "3.3.0", "license": "Apache-2.0", "riskLevel": "Critical", "cve": "CVE-2025-1111", "cvss": 9.8 },
-      { "name": "Nginx", "version": "1.24.0", "license": "BSD-2", "riskLevel": "Low", "cve": null, "cvss": null },
-      { "name": "LuaJIT", "version": "2.1.0", "license": "MIT", "riskLevel": "Low", "cve": null, "cvss": null },
-      { "name": "OpenSSL", "version": "3.0.8", "license": "OpenSSL", "riskLevel": "Low", "cve": null, "cvss": null }
+      {
+        "name": "Log4j-51",
+        "version": "4.4.6",
+        "license": "BSD-2",
+        "riskLevel": "Critical",
+        "cve": "CVE-2025-1501",
+        "cvss": 9.8
+      },
+      {
+        "name": "OpenSSL-52",
+        "version": "2.4.8",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "PostgreSQL Driver-53",
+        "version": "10.1.0",
+        "license": "OpenSSL",
+        "riskLevel": "Medium",
+        "cve": "CVE-2024-3501",
+        "cvss": 6.5
+      },
+      {
+        "name": "Jackson Databind-54",
+        "version": "5.2.0",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-55",
+        "version": "4.6.2",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-56",
+        "version": "4.9.4",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-57",
+        "version": "8.8.5",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-58",
+        "version": "4.7.0",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-59",
+        "version": "4.5.9",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-60",
+        "version": "9.6.3",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-61",
+        "version": "4.0.7",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-62",
+        "version": "10.3.8",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-63",
+        "version": "4.8.2",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-64",
+        "version": "2.3.6",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-65",
+        "version": "9.2.4",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-66",
+        "version": "7.6.4",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-67",
+        "version": "9.7.1",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-68",
+        "version": "9.4.5",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-69",
+        "version": "3.0.7",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-70",
+        "version": "6.6.1",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-71",
+        "version": "7.0.1",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-72",
+        "version": "4.7.4",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-73",
+        "version": "1.4.7",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-74",
+        "version": "5.3.0",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-75",
+        "version": "3.9.9",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Log4j-76",
+        "version": "9.9.4",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "OpenSSL-77",
+        "version": "6.0.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "PostgreSQL Driver-78",
+        "version": "4.0.5",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Jackson Databind-79",
+        "version": "5.4.1",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-80",
+        "version": "8.3.3",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-81",
+        "version": "4.0.8",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-82",
+        "version": "1.1.0",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-83",
+        "version": "9.7.5",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-84",
+        "version": "4.1.4",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-85",
+        "version": "3.3.0",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-86",
+        "version": "9.7.5",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-87",
+        "version": "5.6.7",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-88",
+        "version": "4.3.0",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-89",
+        "version": "9.9.9",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-90",
+        "version": "4.1.7",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-91",
+        "version": "1.5.4",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-92",
+        "version": "2.7.3",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-93",
+        "version": "7.7.2",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-94",
+        "version": "9.9.7",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-95",
+        "version": "1.9.1",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-96",
+        "version": "7.2.6",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-97",
+        "version": "5.6.3",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-98",
+        "version": "3.4.3",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-99",
+        "version": "8.5.9",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-100",
+        "version": "8.2.1",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      }
     ],
-    "impactedServices": ["UPI", "ATM", "AEPS", "Mobile Banking", "Net Banking"],
-    "totalComponents": 23,
+    "impactedServices": [
+      "UPI",
+      "ATM",
+      "AEPS",
+      "Mobile Banking",
+      "Net Banking"
+    ],
+    "totalComponents": 50,
     "criticalComponents": 1,
-    "highComponents": 1
+    "highComponents": 0
   },
   {
     "id": "sb3",
     "application": "AEPS Service",
     "version": "2.0.4",
     "components": [
-      { "name": "Node.js", "version": "18.12.0", "license": "MIT", "riskLevel": "Medium", "cve": "CVE-2024-9999", "cvss": 7.5 },
-      { "name": "Express", "version": "4.18.2", "license": "MIT", "riskLevel": "Low", "cve": null, "cvss": null },
-      { "name": "Passport.js", "version": "0.6.0", "license": "MIT", "riskLevel": "Low", "cve": null, "cvss": null }
+      {
+        "name": "Log4j-101",
+        "version": "2.5.0",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "OpenSSL-102",
+        "version": "10.8.3",
+        "license": "Apache-2.0",
+        "riskLevel": "High",
+        "cve": "CVE-2024-2502",
+        "cvss": 8.2
+      },
+      {
+        "name": "PostgreSQL Driver-103",
+        "version": "5.4.5",
+        "license": "GPL-3.0",
+        "riskLevel": "Medium",
+        "cve": "CVE-2024-3502",
+        "cvss": 6.5
+      },
+      {
+        "name": "Jackson Databind-104",
+        "version": "1.7.4",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-105",
+        "version": "3.9.8",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-106",
+        "version": "10.2.6",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-107",
+        "version": "6.6.4",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-108",
+        "version": "9.4.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-109",
+        "version": "3.7.0",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-110",
+        "version": "9.7.9",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-111",
+        "version": "6.2.5",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-112",
+        "version": "6.5.2",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-113",
+        "version": "9.2.2",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-114",
+        "version": "10.5.3",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-115",
+        "version": "7.9.9",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-116",
+        "version": "7.2.5",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-117",
+        "version": "9.3.2",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-118",
+        "version": "3.6.7",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-119",
+        "version": "10.0.0",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-120",
+        "version": "9.9.6",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-121",
+        "version": "5.5.9",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-122",
+        "version": "6.3.6",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-123",
+        "version": "2.8.4",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-124",
+        "version": "7.0.0",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-125",
+        "version": "5.5.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Log4j-126",
+        "version": "6.8.9",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "OpenSSL-127",
+        "version": "3.9.4",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "PostgreSQL Driver-128",
+        "version": "6.8.3",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Jackson Databind-129",
+        "version": "9.3.1",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-130",
+        "version": "3.5.1",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-131",
+        "version": "4.3.4",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-132",
+        "version": "9.7.4",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-133",
+        "version": "7.5.5",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-134",
+        "version": "2.4.3",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-135",
+        "version": "2.4.2",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-136",
+        "version": "10.9.6",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-137",
+        "version": "7.2.3",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-138",
+        "version": "9.9.0",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-139",
+        "version": "6.9.2",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-140",
+        "version": "7.5.4",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-141",
+        "version": "1.3.2",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-142",
+        "version": "3.7.3",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-143",
+        "version": "4.5.0",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-144",
+        "version": "3.0.1",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-145",
+        "version": "5.4.9",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-146",
+        "version": "9.2.9",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-147",
+        "version": "2.3.4",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-148",
+        "version": "1.2.2",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-149",
+        "version": "7.0.6",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-150",
+        "version": "10.6.7",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      }
     ],
-    "impactedServices": ["AEPS"],
-    "totalComponents": 31,
+    "impactedServices": [
+      "AEPS"
+    ],
+    "totalComponents": 50,
     "criticalComponents": 0,
     "highComponents": 1
+  },
+  {
+    "id": "sb4",
+    "application": "ATM Switch",
+    "version": "1.8.0",
+    "components": [
+      {
+        "name": "Log4j-151",
+        "version": "3.4.8",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "OpenSSL-152",
+        "version": "9.9.1",
+        "license": "MIT",
+        "riskLevel": "High",
+        "cve": "CVE-2024-2503",
+        "cvss": 8.2
+      },
+      {
+        "name": "PostgreSQL Driver-153",
+        "version": "10.4.4",
+        "license": "GPL-3.0",
+        "riskLevel": "Medium",
+        "cve": "CVE-2024-3503",
+        "cvss": 6.5
+      },
+      {
+        "name": "Jackson Databind-154",
+        "version": "6.2.4",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-155",
+        "version": "7.9.3",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-156",
+        "version": "5.0.8",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-157",
+        "version": "4.0.8",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-158",
+        "version": "6.2.6",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-159",
+        "version": "3.0.1",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-160",
+        "version": "1.4.5",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-161",
+        "version": "5.2.6",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-162",
+        "version": "7.6.3",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-163",
+        "version": "10.8.0",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-164",
+        "version": "7.6.7",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-165",
+        "version": "9.6.3",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-166",
+        "version": "1.5.4",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-167",
+        "version": "3.7.8",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-168",
+        "version": "2.7.3",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-169",
+        "version": "9.6.2",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-170",
+        "version": "2.7.0",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-171",
+        "version": "3.4.6",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-172",
+        "version": "9.1.3",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-173",
+        "version": "9.0.9",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-174",
+        "version": "7.2.1",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-175",
+        "version": "2.0.4",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Log4j-176",
+        "version": "3.2.0",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "OpenSSL-177",
+        "version": "2.2.1",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "PostgreSQL Driver-178",
+        "version": "10.2.1",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Jackson Databind-179",
+        "version": "7.6.4",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-180",
+        "version": "3.5.0",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-181",
+        "version": "10.7.6",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-182",
+        "version": "2.1.0",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-183",
+        "version": "9.3.5",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-184",
+        "version": "8.0.8",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-185",
+        "version": "8.7.2",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-186",
+        "version": "7.3.5",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-187",
+        "version": "6.5.0",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-188",
+        "version": "3.7.3",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-189",
+        "version": "8.6.9",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-190",
+        "version": "10.0.9",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-191",
+        "version": "9.6.3",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-192",
+        "version": "2.1.3",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-193",
+        "version": "8.4.3",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-194",
+        "version": "1.0.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-195",
+        "version": "9.9.6",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-196",
+        "version": "2.5.5",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-197",
+        "version": "6.1.2",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-198",
+        "version": "1.5.7",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-199",
+        "version": "2.3.6",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-200",
+        "version": "1.6.1",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      }
+    ],
+    "impactedServices": [
+      "ATM"
+    ],
+    "totalComponents": 50,
+    "criticalComponents": 0,
+    "highComponents": 1
+  },
+  {
+    "id": "sb5",
+    "application": "Net Banking",
+    "version": "5.0.2",
+    "components": [
+      {
+        "name": "Log4j-201",
+        "version": "10.1.2",
+        "license": "BSD-2",
+        "riskLevel": "Critical",
+        "cve": "CVE-2025-1504",
+        "cvss": 9.8
+      },
+      {
+        "name": "OpenSSL-202",
+        "version": "2.2.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "PostgreSQL Driver-203",
+        "version": "6.2.9",
+        "license": "BSD-2",
+        "riskLevel": "Medium",
+        "cve": "CVE-2024-3504",
+        "cvss": 6.5
+      },
+      {
+        "name": "Jackson Databind-204",
+        "version": "3.7.8",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-205",
+        "version": "3.7.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-206",
+        "version": "7.2.3",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-207",
+        "version": "1.9.4",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-208",
+        "version": "7.8.7",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-209",
+        "version": "3.5.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-210",
+        "version": "7.4.3",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-211",
+        "version": "4.7.8",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-212",
+        "version": "7.1.0",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-213",
+        "version": "3.2.9",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-214",
+        "version": "1.7.3",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-215",
+        "version": "9.5.4",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-216",
+        "version": "8.7.9",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-217",
+        "version": "9.2.8",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-218",
+        "version": "4.1.8",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-219",
+        "version": "7.6.9",
+        "license": "Apache-2.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-220",
+        "version": "3.2.7",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-221",
+        "version": "8.9.1",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-222",
+        "version": "9.0.4",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-223",
+        "version": "10.5.0",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-224",
+        "version": "3.9.7",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-225",
+        "version": "6.2.7",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Log4j-226",
+        "version": "10.1.5",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "OpenSSL-227",
+        "version": "6.2.6",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "PostgreSQL Driver-228",
+        "version": "3.1.5",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Jackson Databind-229",
+        "version": "4.6.9",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Express-230",
+        "version": "9.4.3",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "React-231",
+        "version": "2.1.0",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Next.js-232",
+        "version": "5.6.8",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Lodash-233",
+        "version": "8.3.2",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Axios-234",
+        "version": "6.5.1",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Nginx-235",
+        "version": "5.8.9",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "LuaJIT-236",
+        "version": "5.6.1",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "FastAPI-237",
+        "version": "4.1.6",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Uvicorn-238",
+        "version": "9.2.2",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Pydantic-239",
+        "version": "1.5.4",
+        "license": "OpenSSL",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Cryptography-240",
+        "version": "2.5.3",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Requests-241",
+        "version": "10.5.3",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Gunicorn-242",
+        "version": "6.4.9",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Redis Client-243",
+        "version": "4.4.6",
+        "license": "BSD-2",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Hibernate-244",
+        "version": "10.9.6",
+        "license": "LGPL-2.1",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Tomcat-245",
+        "version": "5.7.9",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "SLF4J-246",
+        "version": "5.4.1",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Apache Commons-247",
+        "version": "8.3.3",
+        "license": "MIT",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "H2 Database-248",
+        "version": "8.1.6",
+        "license": "BSD-3",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "JUnit-249",
+        "version": "6.2.1",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      },
+      {
+        "name": "Spring Boot-250",
+        "version": "3.0.5",
+        "license": "GPL-3.0",
+        "riskLevel": "Low",
+        "cve": null,
+        "cvss": null
+      }
+    ],
+    "impactedServices": [
+      "Net Banking",
+      "API Layer"
+    ],
+    "totalComponents": 50,
+    "criticalComponents": 1,
+    "highComponents": 0
   }
 ]

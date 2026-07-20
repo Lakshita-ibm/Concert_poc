@@ -1,16 +1,18 @@
 import os
 import json
-from openai import AzureOpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = AzureOpenAI(
-    api_key=os.getenv("AZURE_OPENAI_KEY", ""),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-01"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT", ""),
-)
 DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o")
+
+def _get_client():
+    from openai import AzureOpenAI
+    return AzureOpenAI(
+        api_key=os.getenv("AZURE_OPENAI_KEY", "dummy"),
+        api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-01"),
+        azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT", "https://placeholder.openai.azure.com/"),
+    )
 
 PSB_CONTEXT = """
 You are an AI risk intelligence assistant for Punjab & Sind Bank (PSB), India.
@@ -38,7 +40,7 @@ Return JSON:
 }}
 """
     try:
-        resp = client.chat.completions.create(
+        resp = _get_client().chat.completions.create(
             model=DEPLOYMENT,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
@@ -75,7 +77,7 @@ Return JSON:
 }}
 """
     try:
-        resp = client.chat.completions.create(
+        resp = _get_client().chat.completions.create(
             model=DEPLOYMENT,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
@@ -100,7 +102,7 @@ Certificates expiring within 10 days: {len(expiring)}
 Services in warning/degraded state: {sum(1 for s in services if s['status'] != 'Healthy')}
 Return JSON: {{"summary": "<4-5 sentence executive summary>", "urgentActions": ["<action1>", "<action2>"]}}
 """
-        resp = client.chat.completions.create(
+        resp = _get_client().chat.completions.create(
             model=DEPLOYMENT,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},

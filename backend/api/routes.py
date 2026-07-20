@@ -32,6 +32,10 @@ def incidents():
 def sbom():
     return data_service.get_sbom()
 
+@router.get("/arena")
+def arena():
+    return data_service.get_arena()
+
 @router.post("/ai/correlate-risk")
 def correlate_risk(req: RiskCorrelationRequest):
     result = ai_service.correlate_risk(req.service, req.cve, req.certificate, req.availability)
@@ -60,16 +64,25 @@ def compliance():
     certs = data_service.get_certs()
     assets = data_service.get_assets()
     sbom = data_service.get_sbom()
+    
     cert_issues = any(c["expiresIn"] <= 10 for c in certs)
     third_party_risk = any(c["riskLevel"] in ["Critical", "High"] for s in sbom for c in s["components"])
+    vuln_issues = sum(1 for v in vulns if v["severity"] == "Critical" and v["status"] == "Open") > 3
+    
+    controls = [
+        { "name": "Asset Inventory", "status": "Pass", "icon": "check" },
+        { "name": "Vulnerability Management", "status": "Warning" if vuln_issues else "Pass", "icon": "warning" if vuln_issues else "check" },
+        { "name": "Certificate Management", "status": "Warning" if cert_issues else "Pass", "icon": "warning" if cert_issues else "check" },
+        { "name": "SBOM", "status": "Pass", "icon": "check" },
+        { "name": "Audit Evidence", "status": "Pass", "icon": "check" },
+        { "name": "Third Party Risk", "status": "Warning" if third_party_risk else "Pass", "icon": "warning" if third_party_risk else "check" },
+    ]
+    
+    score_map = { "Pass": 100, "Warning": 50, "Fail": 0 }
+    total_score = sum(score_map[c["status"]] for c in controls)
+    score = int(total_score / len(controls))
+    
     return {
-        "score": 84,
-        "controls": [
-            { "name": "Asset Inventory", "status": "Pass", "icon": "check" },
-            { "name": "Vulnerability Management", "status": "Pass", "icon": "check" },
-            { "name": "Certificate Management", "status": "Warning" if cert_issues else "Pass", "icon": "warning" if cert_issues else "check" },
-            { "name": "SBOM", "status": "Pass", "icon": "check" },
-            { "name": "Audit Evidence", "status": "Pass", "icon": "check" },
-            { "name": "Third Party Risk", "status": "Warning" if third_party_risk else "Pass", "icon": "warning" if third_party_risk else "check" },
-        ]
+        "score": score,
+        "controls": controls
     }

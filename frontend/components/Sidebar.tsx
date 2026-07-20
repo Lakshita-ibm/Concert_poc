@@ -2,16 +2,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  LayoutDashboard, Network, Brain, ShieldCheck, AlertTriangle, Package, ChevronRight
+  LayoutDashboard, Network, Brain, ShieldCheck, AlertTriangle, Package, ChevronRight, Shield, Bug
 } from "lucide-react";
 
 const nav = [
   { label: "Executive Dashboard", href: "/", icon: LayoutDashboard },
-  { label: "Arena View", href: "/arena", icon: Network },
-  { label: "AI Risk Correlation", href: "/ai-risk", icon: Brain },
-  { label: "RBI Compliance", href: "/compliance", icon: ShieldCheck },
-  { label: "Root Cause Analysis", href: "/rca", icon: AlertTriangle },
+  { label: "Certificate Intelligence", href: "/certificates", icon: Shield },
   { label: "SBOM Intelligence", href: "/sbom", icon: Package },
+  { label: "Vulnerability Intelligence", href: "/vulnerabilities", icon: Bug },
+  { label: "RBI Compliance", href: "/compliance", icon: ShieldCheck },
+  { label: "Arena View", href: "/arena", icon: Network },
+  { label: "Root Cause Analysis", href: "/rca", icon: AlertTriangle },
+  { label: "AI Risk Correlation", href: "/ai-risk", icon: Brain },
 ];
 
 export default function Sidebar() {
@@ -44,7 +46,7 @@ export default function Sidebar() {
         })}
       </nav>
       <div className="px-6 pt-4 border-t border-[#1e2533]">
-        <div className="text-xs text-[#57606a]">POC Build — July 2025</div>
+        <div className="text-xs text-[#57606a]">POC Build: July 2025</div>
         <div className="text-xs text-[#3b82f6] mt-1">877 Branches · 5M+ Customers</div>
       </div>
     </aside>

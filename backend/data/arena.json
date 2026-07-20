@@ -1,0 +1,484 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "UPI Service",
+      "type": "Service",
+      "status": "Critical",
+      "riskScore": 92,
+      "x": 100,
+      "y": 20,
+      "owner": "Digital Banking Team",
+      "cves": 5,
+      "cert": "Expired",
+      "deps": [
+        "n6",
+        "n7"
+      ]
+    },
+    {
+      "id": "n2",
+      "label": "ATM Switch",
+      "type": "Service",
+      "status": "Warning",
+      "riskScore": 78,
+      "x": 300,
+      "y": 20,
+      "owner": "ATM Operations",
+      "cves": 2,
+      "cert": "Healthy",
+      "deps": [
+        "n8"
+      ]
+    },
+    {
+      "id": "n3",
+      "label": "AEPS Service",
+      "type": "Service",
+      "status": "Healthy",
+      "riskScore": 65,
+      "x": 500,
+      "y": 20,
+      "owner": "Payments Team",
+      "cves": 3,
+      "cert": "Expiring Soon",
+      "deps": [
+        "n9",
+        "n10"
+      ]
+    },
+    {
+      "id": "n4",
+      "label": "Mobile Banking",
+      "type": "Service",
+      "status": "Warning",
+      "riskScore": 71,
+      "x": 700,
+      "y": 20,
+      "owner": "Mobile Team",
+      "cves": 4,
+      "cert": "Healthy",
+      "deps": [
+        "n6",
+        "n10"
+      ]
+    },
+    {
+      "id": "n5",
+      "label": "Net Banking",
+      "type": "Service",
+      "status": "Healthy",
+      "riskScore": 67,
+      "x": 900,
+      "y": 20,
+      "owner": "Web Team",
+      "cves": 1,
+      "cert": "Healthy",
+      "deps": [
+        "n6",
+        "n9"
+      ]
+    },
+    {
+      "id": "n6",
+      "label": "API Gateway",
+      "type": "Application",
+      "status": "Critical",
+      "riskScore": 85,
+      "x": 200,
+      "y": 150,
+      "owner": "Platform Team",
+      "cves": 3,
+      "cert": "Expired",
+      "deps": [
+        "n11",
+        "n12"
+      ]
+    },
+    {
+      "id": "n7",
+      "label": "UPI Engine",
+      "type": "Application",
+      "status": "Healthy",
+      "riskScore": 40,
+      "x": 50,
+      "y": 150,
+      "owner": "Digital Banking",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": [
+        "n12",
+        "n13"
+      ]
+    },
+    {
+      "id": "n8",
+      "label": "ATM Processor",
+      "type": "Application",
+      "status": "Warning",
+      "riskScore": 68,
+      "x": 350,
+      "y": 150,
+      "owner": "ATM Team",
+      "cves": 1,
+      "cert": "Healthy",
+      "deps": [
+        "n14"
+      ]
+    },
+    {
+      "id": "n9",
+      "label": "Web Portal",
+      "type": "Application",
+      "status": "Healthy",
+      "riskScore": 30,
+      "x": 600,
+      "y": 150,
+      "owner": "Web Team",
+      "cves": 1,
+      "cert": "Healthy",
+      "deps": [
+        "n15"
+      ]
+    },
+    {
+      "id": "n10",
+      "label": "Auth Service",
+      "type": "Application",
+      "status": "Warning",
+      "riskScore": 70,
+      "x": 800,
+      "y": 150,
+      "owner": "Platform Team",
+      "cves": 2,
+      "cert": "Healthy",
+      "deps": [
+        "n15",
+        "n16"
+      ]
+    },
+    {
+      "id": "n11",
+      "label": "K8s Namespace A",
+      "type": "Infrastructure",
+      "status": "Healthy",
+      "riskScore": 45,
+      "x": 250,
+      "y": 280,
+      "owner": "DevOps",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": [
+        "n17"
+      ]
+    },
+    {
+      "id": "n12",
+      "label": "K8s Namespace B",
+      "type": "Infrastructure",
+      "status": "Healthy",
+      "riskScore": 50,
+      "x": 100,
+      "y": 280,
+      "owner": "DevOps",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": [
+        "n17"
+      ]
+    },
+    {
+      "id": "n13",
+      "label": "HSM Security Module",
+      "type": "Infrastructure",
+      "status": "Healthy",
+      "riskScore": 25,
+      "x": 20,
+      "y": 280,
+      "owner": "SecOps",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": []
+    },
+    {
+      "id": "n14",
+      "label": "ATM Network Switch",
+      "type": "Infrastructure",
+      "status": "Warning",
+      "riskScore": 72,
+      "x": 400,
+      "y": 280,
+      "owner": "Network Team",
+      "cves": 1,
+      "cert": "None",
+      "deps": [
+        "n18"
+      ]
+    },
+    {
+      "id": "n15",
+      "label": "Web App Server",
+      "type": "Infrastructure",
+      "status": "Healthy",
+      "riskScore": 35,
+      "x": 650,
+      "y": 280,
+      "owner": "Ops Team",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": [
+        "n18",
+        "n19"
+      ]
+    },
+    {
+      "id": "n16",
+      "label": "IAM Server",
+      "type": "Infrastructure",
+      "status": "Healthy",
+      "riskScore": 48,
+      "x": 850,
+      "y": 280,
+      "owner": "SecOps",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": [
+        "n19"
+      ]
+    },
+    {
+      "id": "n17",
+      "label": "UPI Database",
+      "type": "Database",
+      "status": "Healthy",
+      "riskScore": 50,
+      "x": 150,
+      "y": 410,
+      "owner": "DBA Team",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": []
+    },
+    {
+      "id": "n18",
+      "label": "Core DB Cluster",
+      "type": "Database",
+      "status": "Healthy",
+      "riskScore": 55,
+      "x": 450,
+      "y": 410,
+      "owner": "DBA Team",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": []
+    },
+    {
+      "id": "n19",
+      "label": "Customer DB Store",
+      "type": "Database",
+      "status": "Healthy",
+      "riskScore": 40,
+      "x": 750,
+      "y": 410,
+      "owner": "DBA Team",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": []
+    },
+    {
+      "id": "n20",
+      "label": "Audit Logs DB",
+      "type": "Database",
+      "status": "Healthy",
+      "riskScore": 30,
+      "x": 950,
+      "y": 410,
+      "owner": "DBA Team",
+      "cves": 0,
+      "cert": "Healthy",
+      "deps": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n6",
+      "relationship": "Routes via"
+    },
+    {
+      "id": "e2",
+      "source": "n1",
+      "target": "n7",
+      "relationship": "Processes via"
+    },
+    {
+      "id": "e3",
+      "source": "n2",
+      "target": "n8",
+      "relationship": "Connects via"
+    },
+    {
+      "id": "e4",
+      "source": "n3",
+      "target": "n6",
+      "relationship": "Routes via"
+    },
+    {
+      "id": "e5",
+      "source": "n3",
+      "target": "n10",
+      "relationship": "Authenticates with"
+    },
+    {
+      "id": "e6",
+      "source": "n4",
+      "target": "n6",
+      "relationship": "Routes via"
+    },
+    {
+      "id": "e7",
+      "source": "n4",
+      "target": "n10",
+      "relationship": "Authenticates with"
+    },
+    {
+      "id": "e8",
+      "source": "n5",
+      "target": "n9",
+      "relationship": "Accesses via"
+    },
+    {
+      "id": "e9",
+      "source": "n5",
+      "target": "n10",
+      "relationship": "Authenticates with"
+    },
+    {
+      "id": "e10",
+      "source": "n6",
+      "target": "n11",
+      "relationship": "Runs on"
+    },
+    {
+      "id": "e11",
+      "source": "n6",
+      "target": "n12",
+      "relationship": "Runs on"
+    },
+    {
+      "id": "e12",
+      "source": "n7",
+      "target": "n12",
+      "relationship": "Runs on"
+    },
+    {
+      "id": "e13",
+      "source": "n7",
+      "target": "n13",
+      "relationship": "Encrypts with"
+    },
+    {
+      "id": "e14",
+      "source": "n8",
+      "target": "n14",
+      "relationship": "Communicates via"
+    },
+    {
+      "id": "e15",
+      "source": "n9",
+      "target": "n15",
+      "relationship": "Hosted on"
+    },
+    {
+      "id": "e16",
+      "source": "n10",
+      "target": "n15",
+      "relationship": "Hosted on"
+    },
+    {
+      "id": "e17",
+      "source": "n10",
+      "target": "n16",
+      "relationship": "Authorizes via"
+    },
+    {
+      "id": "e18",
+      "source": "n11",
+      "target": "n17",
+      "relationship": "Persists to"
+    },
+    {
+      "id": "e19",
+      "source": "n12",
+      "target": "n17",
+      "relationship": "Persists to"
+    },
+    {
+      "id": "e20",
+      "source": "n12",
+      "target": "n18",
+      "relationship": "Reads from"
+    },
+    {
+      "id": "e21",
+      "source": "n14",
+      "target": "n18",
+      "relationship": "Syncs to"
+    },
+    {
+      "id": "e22",
+      "source": "n15",
+      "target": "n18",
+      "relationship": "Queries"
+    },
+    {
+      "id": "e23",
+      "source": "n15",
+      "target": "n19",
+      "relationship": "Reads customer info"
+    },
+    {
+      "id": "e24",
+      "source": "n16",
+      "target": "n19",
+      "relationship": "Queries identity"
+    },
+    {
+      "id": "e25",
+      "source": "n15",
+      "target": "n20",
+      "relationship": "Writes audit"
+    },
+    {
+      "id": "e26",
+      "source": "n16",
+      "target": "n20",
+      "relationship": "Writes audit"
+    },
+    {
+      "id": "e27",
+      "source": "n6",
+      "target": "n10",
+      "relationship": "Routes Auth requests"
+    },
+    {
+      "id": "e28",
+      "source": "n7",
+      "target": "n17",
+      "relationship": "Direct Database connect"
+    },
+    {
+      "id": "e29",
+      "source": "n8",
+      "target": "n18",
+      "relationship": "Direct Core DB access"
+    },
+    {
+      "id": "e30",
+      "source": "n10",
+      "target": "n20",
+      "relationship": "Security audit logger"
+    }
+  ]
+}

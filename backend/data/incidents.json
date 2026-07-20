@@ -1,53 +1,662 @@
 [
   {
     "id": "i1",
-    "title": "UPI Transaction Failures — Peak Hour",
+    "title": "UPI Service Degradation \u2014 Incident 1",
     "service": "UPI",
     "severity": "Critical",
     "status": "Open",
-    "timestamp": "2025-07-10T09:23:00Z",
-    "rootCause": "Expired API Certificate on UPI Gateway",
-    "confidence": 96,
+    "timestamp": "2026-07-16T09:00:00Z",
+    "rootCause": "Expired API Certificate affecting UPI",
+    "confidence": 90,
     "chain": [
-      { "step": 1, "event": "Alert Detected", "detail": "200+ UPI transaction failures reported" },
-      { "step": 2, "event": "Certificate Expired", "detail": "upi-gateway.psb.in TLS certificate expired" },
-      { "step": 3, "event": "API Gateway Failure", "detail": "Kong API Gateway rejecting TLS handshakes" },
-      { "step": 4, "event": "UPI Service Impacted", "detail": "UPI service degraded — 877 branches affected" }
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in UPI transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Expired API Certificate occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "UPI service reported degraded operation status."
+      }
     ],
-    "recommendation": "Renew upi-gateway.psb.in certificate immediately. Patch CVE-2025-1111 within 24 hours."
+    "recommendation": "Perform immediate security patch or review Expired API Certificate to secure the component."
   },
   {
     "id": "i2",
-    "title": "ATM Network Intermittent Connectivity",
+    "title": "ATM Service Degradation \u2014 Incident 2",
     "service": "ATM",
-    "severity": "High",
-    "status": "In Progress",
-    "timestamp": "2025-07-09T14:10:00Z",
-    "rootCause": "Buffer overflow vulnerability in ATM Switch firmware",
-    "confidence": 87,
+    "severity": "Critical",
+    "status": "Open",
+    "timestamp": "2026-07-15T09:00:00Z",
+    "rootCause": "Buffer overflow in Switch firmware affecting ATM",
+    "confidence": 83,
     "chain": [
-      { "step": 1, "event": "Alert Detected", "detail": "ATM connectivity alerts from 50 locations" },
-      { "step": 2, "event": "Firmware Exploit", "detail": "CVE-2025-0890 triggered buffer overflow" },
-      { "step": 3, "event": "ATM Switch Instability", "detail": "ATM Switch rebooting intermittently" },
-      { "step": 4, "event": "ATM Service Impacted", "detail": "500 ATMs experiencing intermittent outages" }
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in ATM transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Buffer overflow in Switch firmware occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "ATM service reported degraded operation status."
+      }
     ],
-    "recommendation": "Apply firmware patch for CVE-2025-0890. Schedule maintenance window within 48 hours."
+    "recommendation": "Perform immediate security patch or review Buffer overflow in Switch firmware to secure the component."
   },
   {
     "id": "i3",
-    "title": "Mobile Banking Login Degradation",
+    "title": "AEPS Service Degradation \u2014 Incident 3",
+    "service": "AEPS",
+    "severity": "Critical",
+    "status": "In Progress",
+    "timestamp": "2026-07-14T09:00:00Z",
+    "rootCause": "Log4j Exploit in Auth Service affecting AEPS",
+    "confidence": 95,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in AEPS transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Log4j Exploit in Auth Service occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "AEPS service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Log4j Exploit in Auth Service to secure the component."
+  },
+  {
+    "id": "i4",
+    "title": "Mobile Banking Service Degradation \u2014 Incident 4",
+    "service": "Mobile Banking",
+    "severity": "High",
+    "status": "In Progress",
+    "timestamp": "2026-07-13T09:00:00Z",
+    "rootCause": "SQL Injection vulnerability in portal affecting Mobile Banking",
+    "confidence": 87,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Mobile Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "SQL Injection vulnerability in portal occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Mobile Banking service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review SQL Injection vulnerability in portal to secure the component."
+  },
+  {
+    "id": "i5",
+    "title": "Net Banking Service Degradation \u2014 Incident 5",
+    "service": "Net Banking",
+    "severity": "High",
+    "status": "In Progress",
+    "timestamp": "2026-07-12T09:00:00Z",
+    "rootCause": "Memory leak in session controller affecting Net Banking",
+    "confidence": 96,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Net Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Memory leak in session controller occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Net Banking service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Memory leak in session controller to secure the component."
+  },
+  {
+    "id": "i6",
+    "title": "UPI Service Degradation \u2014 Incident 6",
+    "service": "UPI",
+    "severity": "High",
+    "status": "In Progress",
+    "timestamp": "2026-07-11T09:00:00Z",
+    "rootCause": "BGP Routing loop at ISP gateway affecting UPI",
+    "confidence": 86,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in UPI transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "BGP Routing loop at ISP gateway occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "UPI service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review BGP Routing loop at ISP gateway to secure the component."
+  },
+  {
+    "id": "i7",
+    "title": "ATM Service Degradation \u2014 Incident 7",
+    "service": "ATM",
+    "severity": "High",
+    "status": "In Progress",
+    "timestamp": "2026-07-10T09:00:00Z",
+    "rootCause": "Hardware failover failure in HSM affecting ATM",
+    "confidence": 97,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in ATM transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Hardware failover failure in HSM occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "ATM service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Hardware failover failure in HSM to secure the component."
+  },
+  {
+    "id": "i8",
+    "title": "AEPS Service Degradation \u2014 Incident 8",
+    "service": "AEPS",
+    "severity": "High",
+    "status": "Resolved",
+    "timestamp": "2026-07-09T09:00:00Z",
+    "rootCause": "DDoS attack targeting payment gateway affecting AEPS",
+    "confidence": 97,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in AEPS transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "DDoS attack targeting payment gateway occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "AEPS service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review DDoS attack targeting payment gateway to secure the component."
+  },
+  {
+    "id": "i9",
+    "title": "Mobile Banking Service Degradation \u2014 Incident 9",
     "service": "Mobile Banking",
     "severity": "High",
     "status": "Resolved",
-    "timestamp": "2025-07-08T18:45:00Z",
-    "rootCause": "Log4j CVE-2024-4040 exploited in authentication service",
+    "timestamp": "2026-07-08T09:00:00Z",
+    "rootCause": "Expired API Certificate affecting Mobile Banking",
     "confidence": 91,
     "chain": [
-      { "step": 1, "event": "Alert Detected", "detail": "Login failures spike — 3.5M users affected" },
-      { "step": 2, "event": "CVE Exploited", "detail": "CVE-2024-4040 Log4j exploit in auth service" },
-      { "step": 3, "event": "Auth Service Down", "detail": "Authentication microservice crashed" },
-      { "step": 4, "event": "Mobile Banking Impacted", "detail": "Users unable to login for 45 minutes" }
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Mobile Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Expired API Certificate occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Mobile Banking service reported degraded operation status."
+      }
     ],
-    "recommendation": "Upgrade Log4j to 2.17.1+. Rotate auth service secrets."
+    "recommendation": "Perform immediate security patch or review Expired API Certificate to secure the component."
+  },
+  {
+    "id": "i10",
+    "title": "Net Banking Service Degradation \u2014 Incident 10",
+    "service": "Net Banking",
+    "severity": "High",
+    "status": "Resolved",
+    "timestamp": "2026-07-07T09:00:00Z",
+    "rootCause": "Buffer overflow in Switch firmware affecting Net Banking",
+    "confidence": 95,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Net Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Buffer overflow in Switch firmware occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Net Banking service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Buffer overflow in Switch firmware to secure the component."
+  },
+  {
+    "id": "i11",
+    "title": "UPI Service Degradation \u2014 Incident 11",
+    "service": "UPI",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07-06T09:00:00Z",
+    "rootCause": "Log4j Exploit in Auth Service affecting UPI",
+    "confidence": 89,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in UPI transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Log4j Exploit in Auth Service occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "UPI service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Log4j Exploit in Auth Service to secure the component."
+  },
+  {
+    "id": "i12",
+    "title": "ATM Service Degradation \u2014 Incident 12",
+    "service": "ATM",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07-05T09:00:00Z",
+    "rootCause": "SQL Injection vulnerability in portal affecting ATM",
+    "confidence": 92,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in ATM transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "SQL Injection vulnerability in portal occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "ATM service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review SQL Injection vulnerability in portal to secure the component."
+  },
+  {
+    "id": "i13",
+    "title": "AEPS Service Degradation \u2014 Incident 13",
+    "service": "AEPS",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07-04T09:00:00Z",
+    "rootCause": "Memory leak in session controller affecting AEPS",
+    "confidence": 80,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in AEPS transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Memory leak in session controller occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "AEPS service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Memory leak in session controller to secure the component."
+  },
+  {
+    "id": "i14",
+    "title": "Mobile Banking Service Degradation \u2014 Incident 14",
+    "service": "Mobile Banking",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07-03T09:00:00Z",
+    "rootCause": "BGP Routing loop at ISP gateway affecting Mobile Banking",
+    "confidence": 95,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Mobile Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "BGP Routing loop at ISP gateway occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Mobile Banking service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review BGP Routing loop at ISP gateway to secure the component."
+  },
+  {
+    "id": "i15",
+    "title": "Net Banking Service Degradation \u2014 Incident 15",
+    "service": "Net Banking",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07-02T09:00:00Z",
+    "rootCause": "Hardware failover failure in HSM affecting Net Banking",
+    "confidence": 86,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Net Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Hardware failover failure in HSM occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Net Banking service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Hardware failover failure in HSM to secure the component."
+  },
+  {
+    "id": "i16",
+    "title": "UPI Service Degradation \u2014 Incident 16",
+    "service": "UPI",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07-01T09:00:00Z",
+    "rootCause": "DDoS attack targeting payment gateway affecting UPI",
+    "confidence": 82,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in UPI transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "DDoS attack targeting payment gateway occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "UPI service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review DDoS attack targeting payment gateway to secure the component."
+  },
+  {
+    "id": "i17",
+    "title": "ATM Service Degradation \u2014 Incident 17",
+    "service": "ATM",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07-00T09:00:00Z",
+    "rootCause": "Expired API Certificate affecting ATM",
+    "confidence": 81,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in ATM transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Expired API Certificate occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "ATM service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Expired API Certificate to secure the component."
+  },
+  {
+    "id": "i18",
+    "title": "AEPS Service Degradation \u2014 Incident 18",
+    "service": "AEPS",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07--1T09:00:00Z",
+    "rootCause": "Buffer overflow in Switch firmware affecting AEPS",
+    "confidence": 80,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in AEPS transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Buffer overflow in Switch firmware occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "AEPS service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Buffer overflow in Switch firmware to secure the component."
+  },
+  {
+    "id": "i19",
+    "title": "Mobile Banking Service Degradation \u2014 Incident 19",
+    "service": "Mobile Banking",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07--2T09:00:00Z",
+    "rootCause": "Log4j Exploit in Auth Service affecting Mobile Banking",
+    "confidence": 89,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Mobile Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "Log4j Exploit in Auth Service occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Mobile Banking service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review Log4j Exploit in Auth Service to secure the component."
+  },
+  {
+    "id": "i20",
+    "title": "Net Banking Service Degradation \u2014 Incident 20",
+    "service": "Net Banking",
+    "severity": "Medium",
+    "status": "Resolved",
+    "timestamp": "2026-07--3T09:00:00Z",
+    "rootCause": "SQL Injection vulnerability in portal affecting Net Banking",
+    "confidence": 87,
+    "chain": [
+      {
+        "step": 1,
+        "event": "Alert Triggered",
+        "detail": "Anomaly detected in Net Banking transaction latency."
+      },
+      {
+        "step": 2,
+        "event": "Root Cause Triggered",
+        "detail": "SQL Injection vulnerability in portal occurred in infrastructure."
+      },
+      {
+        "step": 3,
+        "event": "Secondary Impact",
+        "detail": "Related microservices started rejecting connections."
+      },
+      {
+        "step": 4,
+        "event": "Service Impacted",
+        "detail": "Net Banking service reported degraded operation status."
+      }
+    ],
+    "recommendation": "Perform immediate security patch or review SQL Injection vulnerability in portal to secure the component."
   }
 ]

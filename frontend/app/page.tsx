@@ -5,7 +5,7 @@ import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell,
 } from "recharts";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 const SEVERITY_COLORS: Record<string, string> = {
   Critical: "#ef4444",
@@ -39,15 +39,15 @@ export default function Dashboard() {
   const [vulnDist, setVulnDist] = useState(mock_vulns);
 
   useEffect(() => {
-    fetch(`${API}/dashboard/kpis`).then(r => r.json()).then(setKpis).catch(() => {});
+    fetch(`${API}/dashboard/kpis`).then(r => r.json()).then(setKpis).catch(() => { });
     fetch(`${API}/services`).then(r => r.json()).then((data) => {
       setServices(data);
       fetch(`${API}/vulnerabilities`).then(r => r.json()).then((vulns) => {
         const dist: Record<string, number> = {};
         vulns.forEach((v: any) => { dist[v.severity] = (dist[v.severity] || 0) + 1; });
         setVulnDist(Object.entries(dist).map(([severity, count]) => ({ severity, count })));
-      }).catch(() => {});
-    }).catch(() => {});
+      }).catch(() => { });
+    }).catch(() => { });
   }, []);
 
   const kpiCards = [
@@ -133,8 +133,8 @@ export default function Dashboard() {
                       background: s.riskScore >= 80
                         ? "linear-gradient(90deg, #dc2626, #ef4444)"
                         : s.riskScore >= 65
-                        ? "linear-gradient(90deg, #ea580c, #f97316)"
-                        : "linear-gradient(90deg, #16a34a, #22c55e)",
+                          ? "linear-gradient(90deg, #ea580c, #f97316)"
+                          : "linear-gradient(90deg, #16a34a, #22c55e)",
                     }}
                   />
                 </div>

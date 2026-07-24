@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { ShieldCheck, AlertTriangle, CheckCircle, XCircle, ArrowRight, ShieldAlert, Award } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 interface Control {
   name: string;
@@ -56,12 +56,12 @@ export default function Compliance() {
 
   const statusColor = (s: string) =>
     s === "Pass" || s === "Compliant" ? "#22c55e" :
-    s === "Warning" || s === "Partial" ? "#f97316" : "#ef4444";
+      s === "Warning" || s === "Partial" ? "#f97316" : "#ef4444";
 
   const StatusIcon = ({ s }: { s: string }) =>
     s === "Pass" || s === "Compliant" ? <CheckCircle size={16} className="text-green-500" /> :
-    s === "Warning" || s === "Partial" ? <AlertTriangle size={16} className="text-orange-400" /> :
-    <XCircle size={16} className="text-red-500" />;
+      s === "Warning" || s === "Partial" ? <AlertTriangle size={16} className="text-orange-400" /> :
+        <XCircle size={16} className="text-red-500" />;
 
   const scoreColor = data.score >= 90 ? "#22c55e" : data.score >= 75 ? "#f97316" : "#ef4444";
 
@@ -69,7 +69,7 @@ export default function Compliance() {
   const getRecommendations = () => {
     const recs = [];
     const warnings = data.controls.filter(c => c.status === "Warning" || c.status === "Fail");
-    
+
     if (warnings.some(c => c.name === "Certificate Management")) {
       recs.push({
         title: "Certificate Management Action Required",
@@ -91,7 +91,7 @@ export default function Compliance() {
         priority: "Medium"
       });
     }
-    
+
     if (recs.length === 0) {
       recs.push({
         title: "All controls aligned",
@@ -225,11 +225,11 @@ export default function Compliance() {
               <div key={i} className="bg-[#0f1117] border border-[#1e2533] rounded-lg p-4 space-y-1">
                 <div className="flex justify-between items-center">
                   <span className="text-[10px] uppercase font-semibold px-1.5 py-0.5 rounded bg-red-950/20 text-red-400 border border-red-500/20"
-                        style={{
-                          color: rec.priority === "High" ? "#ef4444" : "#f97316",
-                          borderColor: rec.priority === "High" ? "#ef444430" : "#f9731630",
-                          background: rec.priority === "High" ? "#ef444410" : "#f9731610"
-                        }}>
+                    style={{
+                      color: rec.priority === "High" ? "#ef4444" : "#f97316",
+                      borderColor: rec.priority === "High" ? "#ef444430" : "#f9731630",
+                      background: rec.priority === "High" ? "#ef444410" : "#f9731610"
+                    }}>
                     {rec.priority} Priority
                   </span>
                 </div>

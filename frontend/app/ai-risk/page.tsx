@@ -2,13 +2,13 @@
 import { useState } from "react";
 import { Brain, Loader2, MessageSquare, BarChart3 } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 const PRESETS = [
-  { service: "UPI Gateway",     cve: "CVE-2025-1111", certificate: "expires in 5 days",  availability: "degraded",    score: 95 },
-  { service: "Mobile Banking",  cve: "CVE-2024-4040", certificate: "healthy",            availability: "operational", score: 78 },
-  { service: "ATM Switch",      cve: "CVE-2025-0890", certificate: "none",               availability: "warning",     score: 84 },
-  { service: "AEPS Service",    cve: "CVE-2024-9999", certificate: "expires in 8 days",  availability: "operational", score: 72 },
+  { service: "UPI Gateway", cve: "CVE-2025-1111", certificate: "expires in 5 days", availability: "degraded", score: 95 },
+  { service: "Mobile Banking", cve: "CVE-2024-4040", certificate: "healthy", availability: "operational", score: 78 },
+  { service: "ATM Switch", cve: "CVE-2025-0890", certificate: "none", availability: "warning", score: 84 },
+  { service: "AEPS Service", cve: "CVE-2024-9999", certificate: "expires in 8 days", availability: "operational", score: 72 },
 ];
 
 const QUERIES = [

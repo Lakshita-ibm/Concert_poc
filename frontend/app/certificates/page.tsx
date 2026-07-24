@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Shield, AlertTriangle, CheckCircle2, Search, Calendar, User, Building, ShieldAlert, Clock, TrendingDown } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 interface Certificate {
   id: string;

@@ -7,7 +7,7 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 import { Network, ShieldAlert, CheckCircle2, User, Building, Shield, Activity, Bug } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 const nodeStyle = (risk: number) => ({
   background: risk >= 80 ? "#2d1b1b" : risk >= 65 ? "#2d1e10" : "#0f1d2a",
@@ -33,7 +33,7 @@ export default function ArenaView() {
       .then((r) => r.json())
       .then((data) => {
         setRawNodes(data.nodes);
-        
+
         // Map raw nodes to ReactFlow nodes
         const flowNodes = data.nodes.map((node: any) => ({
           id: node.id,
@@ -46,13 +46,13 @@ export default function ArenaView() {
           },
           style: nodeStyle(node.riskScore)
         }));
-        
+
         // Map raw edges to ReactFlow edges
         const flowEdges = data.edges.map((edge: any) => {
           const sourceNode = data.nodes.find((n: any) => n.id === edge.source);
           const status = sourceNode?.status || "Healthy";
           const stroke = status === "Critical" ? "#ef4444" : (status === "Warning" ? "#f97316" : "#3b82f6");
-          
+
           return {
             id: edge.id,
             source: edge.source,
@@ -64,7 +64,7 @@ export default function ArenaView() {
             labelBgStyle: { fill: "#0f1117", fillOpacity: 0.75 }
           };
         });
-        
+
         setNodes(flowNodes);
         setEdges(flowEdges);
         setLoading(false);
@@ -176,12 +176,12 @@ export default function ArenaView() {
           >
             <Background color="#1e2533" gap={24} size={1} />
             <Controls style={{ background: "#161b27", border: "1px solid #1e2533" }} />
-            <MiniMap 
-              style={{ background: "#0a0d13", border: "1px solid #1e2533" }} 
+            <MiniMap
+              style={{ background: "#0a0d13", border: "1px solid #1e2533" }}
               nodeColor={(n) => {
                 const r = (n.data as any).risk || 0;
                 return r >= 80 ? "#ef4444" : r >= 65 ? "#f97316" : "#3b82f6";
-              }} 
+              }}
             />
           </ReactFlow>
         )}

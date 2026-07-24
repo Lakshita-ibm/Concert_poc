@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { AlertTriangle, Clock, Zap, Shield, ChevronRight } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 const mockIncidents = [
   {
@@ -60,7 +60,7 @@ export default function RCA() {
     fetch(`${API}/incidents`)
       .then(r => r.json())
       .then(data => setIncidents(data.map((inc: any) => ({ ...inc, title: cleanTitle(inc.title) }))))
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   return (
@@ -113,11 +113,10 @@ export default function RCA() {
               <button
                 key={inc.id}
                 onClick={() => setSelected(inc)}
-                className={`w-full text-left rounded-xl border p-4 transition-all duration-200 ${
-                  selected?.id === inc.id
+                className={`w-full text-left rounded-xl border p-4 transition-all duration-200 ${selected?.id === inc.id
                     ? "border-[#3b82f6]"
                     : "border-[#1e2533] hover:border-[#3b82f6]/50"
-                }`}
+                  }`}
                 style={{
                   background: selected?.id === inc.id
                     ? "linear-gradient(135deg, #1a2035, #1e2540)"

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Package, AlertTriangle, CheckCircle } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 const mockSbom = [
   {
@@ -47,7 +47,7 @@ export default function SBOM() {
   const [selected, setSelected] = useState(mockSbom[0]);
 
   useEffect(() => {
-    fetch(`${API}/sbom`).then(r => r.json()).then(setSbom).catch(() => {});
+    fetch(`${API}/sbom`).then(r => r.json()).then(setSbom).catch(() => { });
   }, []);
 
   return (
@@ -123,7 +123,7 @@ export default function SBOM() {
                 <tr key={c.name} className={`border-b border-[#1e2533]/50 hover:bg-[#1e2533]/20 ${c.riskLevel === "Critical" ? "bg-red-950/10" : ""}`}>
                   <td className="py-3 text-white font-medium flex items-center gap-2">
                     {c.riskLevel === "Critical" ? <AlertTriangle size={12} className="text-red-400" /> :
-                     c.riskLevel === "Low" ? <CheckCircle size={12} className="text-green-500" /> : null}
+                      c.riskLevel === "Low" ? <CheckCircle size={12} className="text-green-500" /> : null}
                     {c.name}
                   </td>
                   <td className="py-3 text-[#8b949e] font-mono text-xs">{c.version}</td>

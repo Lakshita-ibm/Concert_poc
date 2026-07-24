@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Bug, ShieldAlert, Search, Shield, Activity, Info } from "lucide-react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
-const API = "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 interface Vulnerability {
   id: string;

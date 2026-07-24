@@ -1,7 +1,16 @@
 import os
+import sys
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api.routes import router
+
+# Add both parent and current directory to sys.path so imports work regardless of CWD
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+try:
+    from backend.api.routes import router
+except ModuleNotFoundError:
+    from api.routes import router
 
 app = FastAPI(title="PSB Concert POC API", version="1.0.0")
 

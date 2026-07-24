@@ -1,6 +1,11 @@
 from fastapi import APIRouter
-from backend.services import data_service, ai_service
-from backend.models.schemas import RiskCorrelationRequest, NLQueryRequest
+
+try:
+    from backend.services import data_service, ai_service
+    from backend.models.schemas import RiskCorrelationRequest, NLQueryRequest
+except ModuleNotFoundError:
+    from services import data_service, ai_service
+    from models.schemas import RiskCorrelationRequest, NLQueryRequest
 
 router = APIRouter()
 
